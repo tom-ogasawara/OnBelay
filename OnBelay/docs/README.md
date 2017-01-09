@@ -26,17 +26,13 @@ sufficient CSS styling:
 - [ ] Bonus: mark importance of questions and weight accordingly in % match
 
 ## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+* [View Wireframes](wireframes)
+* [React Components](component-hierarchy.md)
+* [API endpoints](api-endpoints.md)
+* [DB schema](schema.md)
+* [Sample State](sample-state.md)
+
 
 ## Implementation Timeline
 
