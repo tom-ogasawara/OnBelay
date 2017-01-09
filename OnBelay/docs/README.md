@@ -44,29 +44,87 @@ sufficient CSS styling:
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Notes Model, API, and components (2 days)
+- [ ] New Rails project
+- [ ] `User` model/migration
+- [ ] Back end authentication (session/password)
+- [ ] `StaticPages` controller and root view
+- [ ] Webpack & react/redux modules
+- [ ] `APIUtil` to interact with the API
+- [ ] Redux cycle for frontend authentication
+- [ ] User signup/signin components
+- [ ] Blank landing component after signup/signin
+- [ ] Style signup/signin components
+- [ ] Seed users
+- [ ] Review phase 1
 
-**Objective:** Notes can be created, read, edited and destroyed through
+### Phase 2: Basic Profile Model, API, and components (1 days)
+
+**Objective:** Basic Profiles can be read and edited through
 the API.
 
-### Phase 3: Notebooks (2 day)
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for profiles (`ProfilesController`)
+- [ ] JBuilder views for Basic Profile
+- [ ] redux loop (create and update profile)
+- [ ] Basic Profile Components
+- [ ] Style Basic Profile components
+- [ ] Seed Basic Profile information
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+### Phase 3: Matching (1.5 day)
 
-### Phase 4: Tags (1 days)
+**Objective:** User can browse matches based on location, looking-for, and interests
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+- [ ] `MatchIndex` components and respective redux loops
++ [ ] `MatchIndexItem`  
+- [ ] Seed database with a small amount of test data
+- [ ] JBuilder views for browse page and MatchesIndexItems
+- [ ] `MatchIndexItems` direct user to match profiles
+- [ ] `MatchIndex` filter
++ [ ] style the form
++ [ ] redux loop
+- [ ] Seed more users for matches
 
-### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
+### Phase 4: Interests Model, API, and components (1 half day)
 
-**objective:** Allow rich text editing of notes.
+**Objective:** Interests can be read and edited through
+the API.
+- [ ] `Interests` model
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for profiles (`InterestsController`)
+- [ ] JBuilder views for Interests
+- [ ] update ProfilesComponents
+- [ ] Style Interests component
+- [ ] Seed Interests information
 
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
 
-**objective:** Add infinite scroll to Notes Index
+### Phase 5: Questions (2 day)
+- [ ] `Questions` model
+- [ ] `QuestionResponses` model
+- [ ] `QuestionOptions` model
+- [ ] `Questions` controller
+- [ ] `QuestionResponses` controller
+- [ ] `QuestionOptions` controller
+- [ ] Seed database with a small amount of test data
+- [ ] JBuilder views for Questions
+- [ ] Question components and redux loops
+- [ ] QuestionResponses components and redux loops
+- [ ] Style Question / QuestionResponses components
+- [ ] Seed Questions information
+- [ ] Get match percentage between users based on question responses
+- [ ] ReStyle `MatchesIndexItem` and `Profile` to include match %
+
+
+### Phase 6: Messages (2 days)
+- [ ] `Conversations` model
+- [ ] `Messages` model
+- [ ] CRUD API: `Messages` controller
+- [ ] `Conversations` controller
+- [ ] JBuilder views for `ConversationsIndex`
+- [ ] JBuilder views for `ConversationsIndexItem`
+- [ ] JBuilder views for `Message`
+
+### Phase 7: Advanced Styling, Refactoring, Flex Period (1 day)
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Likes
+- [ ] Availability
