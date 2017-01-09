@@ -20,7 +20,7 @@ sufficient CSS styling:
 - [ ] Messaging
 - [ ] Personality questions
 - [ ] Match percentages based on question answers
-- [ ] Production README [sample](docs/production_readme.md)
+- [ ] Production README
 - [ ] Bonus: add likes
 - [ ] Bonus: block or hide other users
 - [ ] Bonus: mark importance of questions and weight accordingly in % match
@@ -40,7 +40,8 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+### Phase 1: Backend setup and Front End User Authentication
+###          W8D2 - W8D3 (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
 
@@ -55,9 +56,8 @@ sufficient CSS styling:
 - [ ] Blank landing component after signup/signin
 - [ ] Style signup/signin components
 - [ ] Seed users
-- [ ] Review phase 1
 
-### Phase 2: Basic Profile Model, API, and components (1 days)
+### Phase 2: User Profile Model, API, and components (2 days)
 
 **Objective:** Basic Profiles can be read and edited through
 the API.
@@ -70,9 +70,9 @@ the API.
 - [ ] Style Basic Profile components
 - [ ] Seed Basic Profile information
 
-### Phase 3: Matching (1.5 day)
+### Phase 3: Matching (1 day)
 
-**Objective:** User can browse matches based on location, looking-for, and interests
+**Objective:** User can browse matches based on location and preferences
 
 - [ ] `MatchIndex` components and respective redux loops
 + [ ] `MatchIndexItem`  
@@ -83,19 +83,6 @@ the API.
 + [ ] style the form
 + [ ] redux loop
 - [ ] Seed more users for matches
-
-### Phase 4: Interests Model, API, and components (1 half day)
-
-**Objective:** Interests can be read and edited through
-the API.
-- [ ] `Interests` model
-- [ ] Seed database with a small amount of test data
-- [ ] CRUD API for profiles (`InterestsController`)
-- [ ] JBuilder views for Interests
-- [ ] update ProfilesComponents
-- [ ] Style Interests component
-- [ ] Seed Interests information
-
 
 ### Phase 5: Questions (2 day)
 - [ ] `Questions` model
@@ -111,10 +98,10 @@ the API.
 - [ ] Style Question / QuestionResponses components
 - [ ] Seed Questions information
 - [ ] Get match percentage between users based on question responses
-- [ ] ReStyle `MatchesIndexItem` and `Profile` to include match %
+- [ ] ReStyle `MatchesIndexItem` and `Profile` to include match percentage
 
 
-### Phase 6: Messages (2 days)
+### Phase 6: Messages (1 days)
 - [ ] `Conversations` model
 - [ ] `Messages` model
 - [ ] CRUD API: `Messages` controller
@@ -127,4 +114,4 @@ the API.
 
 ### Bonus Features (TBD)
 - [ ] Likes
-- [ ] Availability
+- [ ] Blocking/hiding
