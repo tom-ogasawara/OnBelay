@@ -40,8 +40,7 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication
-###          W8D2 - W8D3 (2 days)
+### Phase 1: Backend setup and Front End User Authentication W8D2-W8D3 (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
 
@@ -57,7 +56,7 @@ sufficient CSS styling:
 - [ ] Style signup/signin components
 - [ ] Seed users
 
-### Phase 2: User Profile Model, API, and components (2 days)
+### Phase 2: User Profile Model, API, and components W8D4-W8D5 (2 days)
 
 **Objective:** Basic Profiles can be read and edited through
 the API.
@@ -70,7 +69,7 @@ the API.
 - [ ] Style Basic Profile components
 - [ ] Seed Basic Profile information
 
-### Phase 3: Matching (1 day)
+### Phase 3: Matching W9D1 (1 day)
 
 **Objective:** User can browse matches based on location and preferences
 
@@ -84,7 +83,7 @@ the API.
 + [ ] redux loop
 - [ ] Seed more users for matches
 
-### Phase 5: Questions (2 day)
+### Phase 5: Questions W9D2-W9D3 (2 day)
 - [ ] `Questions` model
 - [ ] `QuestionResponses` model
 - [ ] `QuestionOptions` model
@@ -101,7 +100,7 @@ the API.
 - [ ] ReStyle `MatchesIndexItem` and `Profile` to include match percentage
 
 
-### Phase 6: Messages (1 days)
+### Phase 6: Messages W9D4 (1 days)
 - [ ] `Conversations` model
 - [ ] `Messages` model
 - [ ] CRUD API: `Messages` controller
@@ -110,7 +109,7 @@ the API.
 - [ ] JBuilder views for `ConversationsIndexItem`
 - [ ] JBuilder views for `Message`
 
-### Phase 7: Advanced Styling, Refactoring, Flex Period (1 day)
+### Phase 7: Advanced Styling, Refactoring, Flex Period W9D5 (1 day)
 
 ### Bonus Features (TBD)
 - [ ] Likes
