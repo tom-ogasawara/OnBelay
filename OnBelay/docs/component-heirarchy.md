@@ -1,72 +1,65 @@
-## Component Hierarchy
+**AuthformContainer**
+  + AuthForm
 
-**AuthFormContainer**
- - AuthForm
+**UserContainer**
+  + Header nav
 
-**HomeContainer**
- - Home
- - Sidebar
+  + **MatchesContainer**
+    + MatchesIndex
+    + Filter: an array of Interest items
+      * ProfileInterestForm (but styled differently)
 
-**NotesContainer**
- - NotesHeader
-  * NoteIndex
+  + MatchesIndex (appears in Browse and Likes)
+    + MatchIndexItem (each match displayed in MatchesIndex, links to a profile)
 
-**NotebookContainer**
- - NotebookHeader
-  + NoteIndex
+  + **ProfileContainer**
+    + **ProfileBasic** (from users table)
+    + **ProfileInterest** (sidebar)
+    + **ProfileAbout** (About tab)
+    + **ProfileAvailability** (Bonus: Availability tab)
+    + **ProfileQuestionIndex** (Questions tab)
+      * ProfileQuestionItem
 
-**SearchResultsContainer**
- - Search
- - NoteIndex
+  + **ProfileFormContainer**
+    + **ProfileBasicForm** (from users table)
+    + **ProfileInterestForm** (sidebar)
+    + **ProfileAboutForm** (About tab)
+    + **ProfileAvailabilityForm** (Bonus: Availability tab)
+    + **ProfileQuestionIndexForm** (Questions tab)
+      * ProfileQuestionItemForm
 
-**TagContainer**
- - NotebookHeader
-  + NoteIndex
+  + **ConversationsContainer**
+    + ConversationsIndex (all currentUser's conversations, displays under header)
+      - ConversationIndexItem (preview a single conversation)
 
-**NoteIndex**
- - NoteIndexItem
-  + NoteDetail
-    + NoteTools
-    - NotebookSearch
-    - Tags
-      - Tag
-    * Note
+  + **MessageContainer**
+      + MessagesIndex (single conversation -- a list of messages)
+        - MessageIndexItem (one message)
+      + NewMessageForm (add message to current chat)
 
-**NewNoteContainer**
- - NewNote
-  - RTETools
-  - NewNoteButton
+  + **Bonus : LikesContainer**
+    + MatchesIndex
+    + Filter: by mutual liking
 
-**Search**
-
-**NewNotebook**
- - NewNotebook
-
-**NewTag**
- - NewTag
-
-**NotebookSearch**
- + AutoSearch
- * AutoSearchResults
-
-**TagsSearch**
- + AutoSearch
- * AutoSearchResults
-
-## Routes
+Routes
 
 |Path   | Component   |
 |-------|-------------|
-| "/sign-up" | "AuthFormContainer" |
-| "/sign-in" | "AuthFormContainer" |
-| "/home" | "HomeContainer" |
-| "/home/note/:noteId" | "NotesContainer" |
-| "/home/notebook/:notebookId/note/:noteId" | "NotebookContainer" |
-| "/home/tag/:tagId/note/:notedId" | "TagContainer" |
-| "/home/search-results" | "SearchResultsContainer"
-| "/new-note" | "NewNoteContainer" |
-| "/search" | "Search" |
-| "/new-notebook" | "NewNotebook" |
-| "/new-tag" | "NewTag" |
-| "/tag-search" | "TagSearch" |
-| "/notebook-search" | "NotebookSearch" |
+|“/sign-up” | “AuthFormContainer"|
+|“/sign-in” | “AuthFormContainer"|
+
+|Path   | Component   |
+|-------|-------------|
+|“/” | “User" |
+|“/profile” | “ProfileContainer" |
+|“/profile/edit” | “ProfileFormContainer" |
+|“/profile/questions” | “ProfileFormContainer" |
+|“/profile/questions/:id"| “QuestionItem"|
+|“/matches” | “MatchesContainer" |
+|“/:username” | “ProfileContainer"|
+|“/:username/about"| “About"| default to this
+|“/:username/questions"| “QuestionIndex"|
+|“/:username/questions/:id"| “QuestionItem"|
+|“/conversations”| “ConversationContainer"|
+|“/conversation/:conversation_id”| “MessageIndex"|
+|“/likes”| “LikesContainer"|
