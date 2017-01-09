@@ -1,5 +1,6 @@
 ## Sample State
-```json
+
+```js
 {
   currentUser: {
     id: 1,
