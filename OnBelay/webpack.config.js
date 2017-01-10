@@ -1,14 +1,17 @@
+var path = require("path");
+
 module.exports = {
-  entry: './frontend/onbelay.jsx',
+  context: __dirname,
+  entry: "./frontend/onbelay.jsx",
   output: {
-    path: 'app/assets/javascripts',
-    filename: 'bundle.js',
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
+    filename: "bundle.js"
   },
   module: {
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
           presets: ['es2015', 'react']
@@ -16,8 +19,8 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   resolve: {
-    extensions: ['', '.js', '.jsx' ]
+    extensions: ["", ".js", ".jsx" ]
   }
 };
