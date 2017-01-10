@@ -1,0 +1,33 @@
+{
+  "name": "OnBelay",
+  "version": "1.0.0",
+  "description": "## OnBelay.io is a web application built to provide rock climbers in the San Francisco Bay Area an easy and effective way to meet and climb with other people.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "webpack": "^1.14.0"
+  },
+  "engines": {
+    "node": "6.2.1",
+    "npm": "3.9.3"
+  }
+}
