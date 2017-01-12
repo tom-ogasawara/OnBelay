@@ -4,17 +4,66 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      login(@user)
-      render "api/users/show"
+      log_in(@user)
+      render :show
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: @user.errors, status: 422
+    end
+  end
+
+  def show
+    @user = User.find(params[:id])
+
+    if @user
+      render :profile
+    else
+      render json: @user.errors, status: 422
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(user_params)
+      render :profile
+    else
+      render json: @user.errors, status: 422
+    end
+  end
+
+  def index
+    @users = current_user.find_users_within(params[:distance])
+      .where("username != ?", current_user.username)
+
+    if @users
+      render :index
+    else
+      render json: @users.errors, status: 422
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user)
+      .permit(
+        :username,
+        :password,
+        :email,
+        :indoorsoutdoors,
+        :discipline,
+        :age,
+        :location,
+        :summary,
+        :doing,
+        :good_at,
+        :favorites,
+        :thinking,
+        :friday,
+        :message_if,
+        :prof_pic_id,
+        :image
+        )
   end
 
 end

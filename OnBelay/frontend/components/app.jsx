@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from './greeting/nav_bar_container';
-import LogInModalContainer from './signup/log_in_modal_container';
+import LogInModalContainer from './auth/log_in_modal_container';
 import { connect } from 'react-redux';
 
 const App = ({children, modal}) => {
