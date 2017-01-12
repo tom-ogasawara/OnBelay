@@ -1,23 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <Link to="/login" activeClassName="current">Login</Link>
-    &nbsp;or&nbsp;
-    <Link to="/signup" activeClassName="current">Sign up!</Link>
-  </nav>
-);
 
-const personalGreeting = (currentUser, logout) => (
-	<hgroup className="header-group">
-    <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    <button className="header-button" onClick={logout}>Log Out</button>
-	</hgroup>
-);
+class Greeting extends React.Component {
+  constructor() {
+    super();
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
+    this.handleLogOut = this.handleLogOut.bind(this);
+  }
 
-export default Greeting;
+  handleLogOut(e) {
+    e.preventDefault();
+
+    this.props.logout().then(() => this.props.router.push("/signup"));
+  }
+
+  render() {
+
+    if (this.props.currentUser) {
+      return(
+        <div>
+          <h2>Welcome, {this.props.currentUser.username}!</h2>
+          <form onSubmit={this.handleLogOut}>
+            <input type="submit" value="Log Out" />
+          </form>
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
+  }
+}
+
+export default withRouter(Greeting);

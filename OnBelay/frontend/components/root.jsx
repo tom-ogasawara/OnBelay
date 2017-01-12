@@ -1,49 +1,49 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-
-// react router
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-
-// react components
+import { Router, Route, IndexRedirect, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
-import SessionFormContainer from './session_form/session_form_container';
+// import InitialRegistration from './signup/initial_reg';
+// import RegPageContainer from './signup/reg_page_container';
+// import ProfileContainer from './profile/profile_container';
+import GreetingContainer from './greeting/greeting_container';
+// import ConversationsContainer from './conversation/conversations_container';
+// import ChatContainer from './conversation/chat_container';
+// import MatchContainer from './browse/matches_container';
 
-// material-ui
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-// import AppBar from 'material-ui/AppBar';
+const Root = ({store}) => {
 
-
-
-const Root = ({ store }) => {
-
-  const _ensureLoggedIn = (nextState, replace) => {
-    const currentUser = store.getState().session.currentUser;
-    if (!currentUser) {
-      replace('/login');
+  function _redirectIfLoggedIn(nextState, replace) {
+    if (store.getState().session.currentUser) {
+      replace("/");
     }
-  };
+  }
 
-  const _redirectIfLoggedIn = (nextState, replace) => {
-    const currentUser = store.getState().session.currentUser;
-    if (currentUser) {
-      replace('/');
+  function _redirectIfNotLoggedIn(nextState, replace) {
+    if (!store.getState().session.currentUser) {
+      replace("/signup");
     }
+  }
+
+  const Home = () => {
+    return(
+      <div></div>
+    );
   };
 
   return (
-    <Provider store={store}>
-      <Router history={hashHistory}>
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-          <Route path="/" component={App}>
-            <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-            <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-          </Route>
-      </MuiThemeProvider>
+    <Provider store={ store }>
+      <Router history={ hashHistory }>
+        <Route path="/" component={ App }>
+          // <IndexRoute component={ MatchContainer } onEnter={ _redirectIfNotLoggedIn }/>
+          <Route path="/profile/:userId" component={ ProfileContainer } onEnter={ _redirectIfNotLoggedIn } />
+          <Route path="/signup" component={ RegPageContainer } onEnter={ _redirectIfLoggedIn } />
+          // <Route path="/conversations" component={ ConversationsContainer } onEnter={ _redirectIfNotLoggedIn } />
+          // <Route path="/conversations/:conversationId" component={ ChatContainer } onEnter={ _redirectIfNotLoggedIn } />
+        </Route>
       </Router>
     </Provider>
   );
 };
+
 
 export default Root;

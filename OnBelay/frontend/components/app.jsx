@@ -1,17 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router';
-import GreetingContainer from './greeting/greeting_container';
+import NavBarContainer from './greeting/nav_bar_container';
+import LogInModalContainer from './signup/log_in_modal_container';
+import { connect } from 'react-redux';
 
-const App = ({ children }) => (
-  <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h1>onBelay</h1>
-      </Link>
-      <GreetingContainer />
-    </header>
-    {children}
-  </div>
-);
+const App = ({children, modal}) => {
+  const modalEl = modal ? <LogInModalContainer /> : null;
 
-export default App;
+  return (
+    <div>
+      <NavBarContainer />
+      { children }
+      { modalEl }
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  modal: state.modal,
+});
+
+export default connect(
+  mapStateToProps
+)(App);
