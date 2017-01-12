@@ -221,6 +221,8 @@
 }
 
 .reg-errors {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
   color: red;
+  text-shadow: 0 0 5px #444;
 }
