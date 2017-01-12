@@ -45,8 +45,8 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   # config/environments/production.rb
-  config.serve_static_files = true
-  #TODO config.serve_static_files = true is depreciated
+  config.public_file_server.enabled = true
+
   # ...
   config.log_level = :debug
 
