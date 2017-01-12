@@ -14,7 +14,7 @@ and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] Browse and search other users by location and ‘looking for’
 - [ ] Messaging
@@ -40,13 +40,13 @@ sufficient CSS styling:
 
 **Objective:** Functioning rails project with front-end Authentication
 
-- [ ] New Rails project
-- [ ] `User` model/migration
-- [ ] Back end authentication (session/password)
-- [ ] `StaticPages` controller and root view
-- [ ] Webpack & react/redux modules
+- [x] New Rails project
+- [x] `User` model/migration
+- [x] Back end authentication (session/password)
+- [x] `StaticPages` controller and root view
+- [x] Webpack & react/redux modules
 - [ ] `APIUtil` to interact with the API
-- [ ] Redux cycle for frontend authentication
+- [x] Redux cycle for frontend authentication
 - [ ] User signup/signin components
 - [ ] Blank landing component after signup/signin
 - [ ] Style signup/signin components

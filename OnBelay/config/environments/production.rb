@@ -46,6 +46,7 @@ Rails.application.configure do
   # when problems arise.
   # config/environments/production.rb
   config.serve_static_files = true
+  #TODO config.serve_static_files = true is depreciated
   # ...
   config.log_level = :debug
 
