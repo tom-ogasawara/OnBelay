@@ -12,7 +12,11 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User
+      .includes(:messages)
+      .includes(:responses)
+      .includes(:questions)
+      .find(params[:id])
 
     if @user
       render :profile
@@ -33,6 +37,8 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = current_user.find_users_within(params[:distance])
+      .includes(:responses)
+      .includes(:questions)
       .where("username != ?", current_user.username)
 
     if @users
@@ -49,21 +55,15 @@ class Api::UsersController < ApplicationController
       .permit(
         :username,
         :password,
-        :email,
-        :indoorsoutdoors,
         :discipline,
+        :indoorsoutdoors,
+        :email,
         :age,
         :location,
         :summary,
-        :doing,
-        :good_at,
-        :favorites,
-        :thinking,
-        :friday,
-        :message_if,
         :prof_pic_id,
         :image
-        )
+      )
   end
 
 end
