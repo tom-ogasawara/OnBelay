@@ -21,6 +21,7 @@
 #  indoorsoutdoors    :string           not null
 #  location           :string           not null
 #  email              :string           not null
+#  age                :integer          not null
 #
 
 require 'test_helper'

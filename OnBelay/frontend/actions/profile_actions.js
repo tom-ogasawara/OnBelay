@@ -19,6 +19,13 @@ export const updateProfile = (user) => {
   };
 };
 
+export const updateImage = (formData, user) => {
+  return (dispatch) => {
+    return APIUtil.updateImage(formData, user)
+      .then((user) => dispatch(receiveCurrentProfile(user)), (errors) => dispatch(receiveErrors(errors.responseJSON)));
+  };
+};
+
 export const receiveCurrentProfile = (user) => {
   return {
     type: RECEIVE_CURRENT_PROFILE,

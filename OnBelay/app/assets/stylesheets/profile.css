@@ -1,0 +1,247 @@
+.profile-page {
+}
+
+.site-nav {
+  border-bottom: 1px solid #fff;
+  min-width: 800px;
+  height: 70px;
+  background: #000;
+
+}
+
+.nav-logo {
+  float: left;
+  color: #fff;
+  font-size: 40px;
+  margin: 10px 40px 0 30px;
+}
+
+.nav-logo:hover {
+  color: #aaa;
+}
+
+.nav-prof-pic {
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav-prof-pic:hover {
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-left-link {
+  float: left;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 61px;
+  padding-top: 4px;
+  margin-right: 40px;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 40px;
+}
+
+.nav-right-link {
+  float: left;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 61px;
+  padding-top: 4px;
+  margin-left: 40px;
+}
+
+.profile-main {
+  width: auto;
+  margin: 0 auto;
+  background: none;
+  padding-bottom: 60px;
+  background: #fff;
+  position: relative;
+}
+
+.profile-header {
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+.inner-header {
+  position: relative;
+  padding-left: 80px;
+  padding-right: 60px;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.user-info {
+  float: left;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.like-section {
+  position: relative;
+  float: right;
+  margin-top: 67px;
+}
+
+.profile-content {
+  padding-top: 30px;
+  min-height: 420px;
+  width: 1000px;
+  padding-left: 80px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-thumb {
+  float: left;
+  position: relative;
+  z-index: 2;
+  width: 180px;
+  height: 180px;
+}
+
+.user-basics {
+  position: relative;
+  float: left;
+  margin-top: 37px;
+  margin-left: 8px;
+  padding: 12px;
+  padding-top: 8px;
+  max-width: 370px;
+  white-space: nowrap;
+}
+
+.prof-pic {
+  border-radius: 50%;
+  background: #ccc;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.non-user {
+  cursor: auto;
+}
+
+#update-input {
+  position: absolute;
+  left: -1000px;
+}
+
+.update-image-block {
+  position: absolute;
+  text-align: center;
+  height: 35px;
+  width: 110px;
+  top: 110px;
+  left: 35px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.user-thumb:hover .update-image-block {
+  border-radius: 5px;
+  background: #777;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  line-height: 35px;
+}
+
+.user-name {
+  color: #fff;
+  font-weight: 300;
+  font-size: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-details {
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.profile-tabs-container {
+  border-bottom: 1px solid #777;
+  margin: 0 20px;
+}
+
+.profile-tabs {
+  width: 1000px;
+  padding-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs {
+  font-weight: bold;
+}
+
+.tabs > li {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  margin: 0 30px;
+  padding: 15px
+}
+
+.profile-actions {
+  float: right;
+  margin-top: 67px;
+}
+
+.profile-like-button {
+  border-radius: 5px;
+  height: 46px;
+  margin-right: 20px;
+  width: 130px;
+  text-align: center;
+}
+
+.profile-message-button {
+  border-radius: 5px;
+  height: 46px;
+  width: 130px;
+  text-align: center;
+}
+
+.block {
+  display: block;
+  margin-top: 15px;
+  height: 25px;
+  width: 35px;
+  border-radius: 25px;
+}
+
+.message-bubble {
+  position: relative;
+  color: #fff;
+}
+
+.pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  left: 22px;
+  bottom: -6px;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115042818) do
+ActiveRecord::Schema.define(version: 20170116014919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20170115042818) do
     t.string   "indoorsoutdoors",    null: false
     t.string   "location",           null: false
     t.string   "email",              null: false
+    t.integer  "age",                null: false
     t.index ["discipline"], name: "index_users_on_discipline", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["indoorsoutdoors"], name: "index_users_on_indoorsoutdoors", using: :btree
