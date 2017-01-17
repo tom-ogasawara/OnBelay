@@ -19,27 +19,27 @@ Response.destroy_all
 # create two demo users
 
 demo_user_a = User.create(
-username: "chrissharma",
-password: "password",
-discipline: "lead",
-indoorsoutdoors: "outdoors",
-email: "chris@sharma.com",
-age: 35,
-location: "95060",
-summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
-image: File.open("#{Rails.root}/app/assets/images/sharma_user_image.jpg")
+  username: "chrissharma",
+  password: "password",
+  discipline: "lead",
+  indoorsoutdoors: "outdoors",
+  email: "chris@sharma.com",
+  age: 35,
+  location: "95060",
+  summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
+  image: open("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg")
 )
 
 demo_user_b = User.create(
-username: "nalle86",
-password: "password",
-discipline: "boulder",
-indoorsoutdoors: "outdoors",
-email: "nalle@lasportiva.com",
-age: 30,
-location: "94705",
-summary: "Waking up today I can’t help but look at the world with different eyes. Having achieved the first ascent of Burden of Dreams marks a new level in my climbing. With a handful of existing 8C+ boulders in the world, proposing 9A is the logical step.",
-image: File.open("#{Rails.root}/app/assets/images/nalle_user_image.jpg")
+  username: "nalle86",
+  password: "password",
+  discipline: "boulder",
+  indoorsoutdoors: "outdoors",
+  email: "nalle@lasportiva.com",
+  age: 30,
+  location: "94705",
+  summary: "Waking up today I can’t help but look at the world with different eyes. Having achieved the first ascent of Burden of Dreams marks a new level in my climbing. With a handful of existing 8C+ boulders in the world, proposing 9A is the logical step.",
+  image: open("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg")
 )
 
 # write questions
@@ -162,7 +162,7 @@ total = 0
 
 # seed users
 
-while total < 400 do
+while total < 100 do
   user = nil;
 
   username = Faker::Internet.user_name
@@ -184,7 +184,7 @@ while total < 400 do
     age: age,
     location: location,
     summary: summary,
-    image: File.open("#{Rails.root}/app/assets/images/sharma_user_image.jpg")
+    image: open("http://res.cloudinary.com/tomogasawara/image/upload/v1484685697/default_user_image_ckwjm2.png")
   )
 
 
