@@ -9,10 +9,9 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  summary            :text
-#  message_if         :text
 #  prof_pic_id        :integer
-#  latitude           :float
-#  longitude          :float
+#  lat                :float
+#  lng                :float
 #  image_file_name    :string
 #  image_content_type :string
 #  image_file_size    :integer
