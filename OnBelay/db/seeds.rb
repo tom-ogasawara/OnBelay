@@ -19,7 +19,7 @@ demo_user = User.create(
 username: "chrissharma",
 password: "password",
 discipline: "lead",
-indoorsoutdoors: "man",
+indoorsoutdoors: "outdoors",
 email: "chris@sharma.com",
 age: 35,
 location: "95060",
