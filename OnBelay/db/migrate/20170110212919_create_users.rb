@@ -13,7 +13,6 @@ class CreateUsers < ActiveRecord::Migration
       t.float :longitude
       t.integer :prof_pic_id, index: true
       t.text :summary
-      t.text :doing
   
 
       t.timestamps null: false
