@@ -13,12 +13,14 @@ class CreateUsers < ActiveRecord::Migration
       t.float :longitude
       t.integer :prof_pic_id, index: true
       t.text :summary
-  
+
 
       t.timestamps null: false
     end
     add_index :users, :username, unique: true
     add_index :users, :email, unique: true
+    add_index :users, :indoorsoutdoors
+    add_index :users, :discipline
     add_index :users, :session_token, unique: true
   end
 end
