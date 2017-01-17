@@ -7,7 +7,6 @@ import QuestionsContainer from '../question/questions_container';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       imageFile: null,
       imageUrl: null
@@ -155,6 +154,7 @@ class Profile extends React.Component {
   }
 
   render() {
+
     if (!this.props.profile || !this.props.currentUser) {
       return <div></div>;
     } else {
@@ -171,7 +171,7 @@ class Profile extends React.Component {
                     {this.props.profile.username}
                   </h2>
                   <h3 className="user-details">
-                    {this.props.profile.age} • {this.props.profile.location} • {this.props.profile.sexuality} • {this.props.profile.gender}
+                    {this.props.profile.age} • {this.props.profile.location} • {this.props.profile.indoorsoutdoors} • {this.props.profile.discipline}
                   </h3>
                 </div>
               </div>

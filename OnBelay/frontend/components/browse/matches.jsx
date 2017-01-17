@@ -23,7 +23,7 @@ class Matches extends React.Component {
     this.sortOptions = this.sortOptions.bind(this);
     this.distanceOptions = this.distanceOptions.bind(this);
     this.handleDistance = this.handleDistance.bind(this);
-    this.sexualityPreference = this.sexualityPreference.bind(this);
+    this.disciplinePreference = this.disciplinePreference.bind(this);
     this.preferences = this.preferences.bind(this);
     this.minAge = this.minAge.bind(this);
     this.maxAge = this.maxAge.bind(this);
@@ -54,61 +54,44 @@ class Matches extends React.Component {
     }
   }
 
-  sexualityPreference(user) {
-    if (this.props.currentUser.sexuality === "straight" && this.props.currentUser.gender === "man") {
+  disciplinePreference(user) {
+    if (this.props.currentUser.discipline === "climb") {
       return (
-        this.props.users[user.user].gender === "woman" &&
-        this.props.users[user.user].sexuality !== "gay"
+        this.props.users[user.user].discipline === "climb" &&
+        this.props.users[user.user].discipline === "boulder" &&
+        this.props.users[user.user].discipline === "topRope" &&
+        this.props.users[user.user].discipline === "lead"
       );
-    } else if (this.props.currentUser.sexuality === "straight") {
+    } else if (this.props.currentUser.discipline === "boulder") {
       return (
-        this.props.users[user.user].gender === "man" &&
-        this.props.users[user.user].sexuality !== "gay"
+        this.props.users[user.user].discipline === "boulder"
       );
-    } else if (this.props.currentUser.sexuality === "gay" && this.props.currentUser.gender === "man") {
+    } else if (this.props.currentUser.discipline === "topRope") {
       return (
-        this.props.users[user.user].gender === "man" &&
-        this.props.users[user.user].gender !== "straight"
+        this.props.users[user.user].discipline === "topRope"
       );
-    } else if (this.props.currentUser.sexuality === "gay") {
+    } else if (this.props.currentUser.discipline === "lead") {
       return (
-        this.props.users[user.user].gender === "woman" &&
-        this.props.users[user.user].sexuality !== "straight"
-      );
-    } else if (this.props.currentUser.sexuality === "bisexual" && this.props.currentUser.gender === "man"){
-      return (
-        (this.props.users[user.user].gender === "woman" && this.props.users[user.user].sexuality === "straight") ||
-        (this.props.users[user.user].gender === "man" && this.props.users[user.user].sexuality === "gay") ||
-        (this.props.users[user.user].sexuality === "bisexual")
-      );
-    } else {
-      return (
-        (this.props.users[user.user].gender === "woman" && this.props.users[user.user].sexuality === "gay") ||
-        (this.props.users[user.user].gender === "man" && this.props.users[user.user].sexuality === "straight") ||
-        (this.props.users[user.user].sexuality === "bisexual")
+        this.props.users[user.user].discipline === "lead"
       );
     }
   }
 
 
   preferences() {
-    let gender;
+    let indoorsoutdoors;
 
-    if (this.props.currentUser.sexuality === "straight" && this.props.currentUser.gender === "man") {
-      gender = "women";
-    } else if (this.props.currentUser.sexuality === "straight") {
-      gender = "men";
-    } else if (this.props.currentUser.sexuality === "gay" && this.props.currentUser.gender === "woman") {
-      gender = "men";
-    } else if (this.props.currentUser.sexuality === "gay") {
-      gender = "women";
+    if (this.props.currentUser.indoorsoutdoors === "indoors") {
+      indoorsoutdoors = "indoors";
+    } else if (this.props.currentUser.indoorsoutdoors === "outdoors") {
+      indoorsoutdoors = "outdoors";
     } else {
-      gender = "both men and woman";
+      indoorsoutdoors = "everywhere";
     }
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Looking for {gender} between the ages of {this.state.minAge} and {this.state.maxAge} that are your complete opposites</p>
+        <p className="browse-large">Looking for people who climb {indoorsoutdoors} between the ages of {this.state.minAge} and {this.state.maxAge}</p>
       </div>
     );
 
@@ -248,7 +231,7 @@ class Matches extends React.Component {
     }).filter((user) =>
       this.props.users[user.user].age > this.state.minAge &&
       this.props.users[user.user].age < this.state.maxAge &&
-      this.sexualityPreference(user)
+      this.disciplinePreference(user)
     );
   }
 

@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Conversation.destroy_all
-Message.destroy_all
-Question.destroy_all
 Like.destroy_all
+Message.destroy_all
+Conversation.destroy_all
+Question.destroy_all
 Answer.destroy_all
 Response.destroy_all
 

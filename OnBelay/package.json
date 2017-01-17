@@ -1,7 +1,7 @@
 {
   "name": "OnBelay",
-  "version": "1.0.0",
   "description": "## OnBelay.io is a web application built to provide rock climbers in the San Francisco Bay Area an easy and effective way to meet and climb with other people.",
+  "version": "1.0.0",
   "main": "index.js",
   "directories": {
     "doc": "docs",
