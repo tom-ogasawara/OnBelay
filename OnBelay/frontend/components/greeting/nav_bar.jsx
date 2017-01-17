@@ -19,13 +19,13 @@ class NavBar extends React.Component {
       return <div></div>;
     } else {
       return(
-        <nav className="site-nav group">
+        <nav className="nav-bar group">
           <div>
             <h1 className="nav-logo">
               <a href="/">onBelay</a>
             </h1>
             <ul className="nav-left group">
-              <li className="nav-left-link">
+              <li className="nav-browse">
                 <a href="/">Browse Matches</a>
               </li>
             </ul>

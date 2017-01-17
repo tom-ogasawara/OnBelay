@@ -6,9 +6,9 @@
   background-position: center;
 }
 
-.reg-header {
+.splash-top {
   position: relative;
-  height: 201px;
+  height: 200px;
   padding-top: 20px;
   margin-bottom: 30px;
 }
@@ -59,11 +59,11 @@
   background-color: rgba(222, 222, 222, 0.8);
 }
 
-.reg-bottom {
+.splash-bottom {
   padding-bottom: 130px;
 }
 
-.catchphrase {
+.splash-blurb {
   margin: 0 auto 30px;
   text-align: center;
   font-weight: 300;
@@ -147,7 +147,7 @@
   justify-content: center;
 }
 
-.image-box {
+.splash-sub-image {
   width: 200px;
   margin: 70px;
 }

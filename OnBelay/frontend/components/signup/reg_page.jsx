@@ -30,7 +30,7 @@ class RegPage extends React.Component {
     return (
       <div>
         <div className="background group">
-          <div className="reg-header group">
+          <div className="splash-top group">
             <div className="login-header">
               { "Already a member?" }
               <button className="login-button" onClick={ this.handleClick } >
@@ -42,8 +42,8 @@ class RegPage extends React.Component {
             </div>
             <h1 className="logo">onBelay</h1>
           </div>
-          <div className="reg-bottom">
-            <div className="catchphrase">
+          <div className="splash-bottom">
+            <div className="splash-blurb">
               Find a climbing partner anywhere on Earth.
             </div>
             <InitialRegistrationContainer />
@@ -51,19 +51,19 @@ class RegPage extends React.Component {
         </div>
         <div className="bottom-section group">
           <div className="image-container group">
-            <div className="image-box">
+            <div className="splash-sub-image">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
               <p>
                 Temp filler text 1
               </p>
             </div>
-            <div className="image-box">
+            <div className="splash-sub-image">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
               <p>
                 Temp filler text 2
               </p>
             </div>
-            <div className="image-box">
+            <div className="splash-sub-image">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
               <p>
                 Temp filler text 3
