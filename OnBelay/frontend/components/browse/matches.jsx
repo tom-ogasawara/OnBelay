@@ -58,19 +58,19 @@ class Matches extends React.Component {
 
 
   preferences() {
-    let indoorsoutdoors;
+    let climbLocation;
 
     if (this.props.currentUser.indoorsoutdoors === "indoors") {
-      indoorsoutdoors = "indoors";
+      climbLocation = "indoors";
     } else if (this.props.currentUser.indoorsoutdoors === "outdoors") {
-      indoorsoutdoors = "outdoors";
+      climbLocation = "outdoors";
     } else {
-      indoorsoutdoors = "everywhere";
+      climbLocation = "everywhere";
     }
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Looking for people who climb {indoorsoutdoors} </p>
+        <p className="browse-large">Looking for people who climb {climbLocation} </p>
       </div>
     );
 
