@@ -10,8 +10,8 @@
 #  updated_at         :datetime         not null
 #  summary            :text
 #  prof_pic_id        :integer
-#  lat                :float
-#  lng                :float
+#  latitude           :float
+#  longitude          :float
 #  image_file_name    :string
 #  image_content_type :string
 #  image_file_size    :integer
@@ -41,8 +41,8 @@ class User < ActiveRecord::Base
 
   acts_as_mappable default_units: :miles,
                    distance_field_name: :distance,
-                   lat_column_name: :lat,
-                   lng_column_name: :lng
+                   lat_column_name: :latitude,
+                   lng_column_name: :longitude
 
   has_attached_file :image, default_url: "default_user_image.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

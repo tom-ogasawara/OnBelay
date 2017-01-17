@@ -1,0 +1,161 @@
+.preferences-bar {
+  height: 120px;
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/tomogasawara/image/upload/e_auto_contrast/v1484257601/20161023_141952_tclrz6.jpg);
+  background-size: cover;
+  background-position: bottom;
+  text-align: center;
+}
+
+.browse-large {
+  padding-top: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000000;
+
+}
+
+.browse-smaller {
+  padding-top: 2px;
+  font-size: 17px;
+}
+
+.browse-smallest {
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.sort-box {
+  width: 900px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #474d59;
+}
+
+.sort-text-container {
+  float: right;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.distance-container {
+  float: right;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.sort-dropdown {
+  margin-left: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.match-container {
+  width: 900px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.match-item-wrapper {
+  float: left;
+  position: relative;
+  width: 280px;
+  height: 385px;
+  margin: 0 10px 40px 10px;
+}
+
+.match-item {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 385px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.browse-pic {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  transition: height 0.5s ease;
+  height: 225px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.browse-pic:hover {
+  transition: height 0.5s ease;
+  height: 235px;
+  cursor: pointer;
+}
+
+.match-text {
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.username-text {
+  color: #474d59;
+  font-size: 22px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.user-browse-info {
+  font-size: 15px;
+  color: #949aa6;
+  margin-bottom: 5px;
+}
+
+.match-percentage {
+  font-size: 20px;
+  color: #474d59;
+}
+
+.browse-like-button {
+  border: 1px solid rgba(157,186,242,0.25);
+  border-radius: 5px;
+  margin-top: 5px;
+  height: 40px;
+  width: 130px;
+  text-align: center;
+}
+
+.browse-like-button:hover {
+  border: 1px solid #ccd0d9;
+  color: #5e6573;
+  background: rgba(174,180,191,0.1);
+}
+
+.browse-liked {
+  background: #efc417;
+  color: #fff;
+}
+
+.green {
+  color: #13de39;
+}
+
+.orange {
+  color: #ffc107;
+}
+
+.red {
+  color: #f44336;
+}

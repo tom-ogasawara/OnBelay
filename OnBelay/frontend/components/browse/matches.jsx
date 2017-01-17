@@ -1,6 +1,5 @@
 import React from 'react';
 import MatchItem from './match_item';
-import Spinner from './spinner';
 import { withRouter } from 'react-router';
 
 class Matches extends React.Component {
@@ -9,9 +8,7 @@ class Matches extends React.Component {
 
     this.state = {
       distance: 500,
-      sortBy: "match percentage",
-      minAge: 0,
-      maxAge: 0
+      sortBy: "match percentage"
     };
 
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
@@ -25,8 +22,6 @@ class Matches extends React.Component {
     this.handleDistance = this.handleDistance.bind(this);
     this.disciplinePreference = this.disciplinePreference.bind(this);
     this.preferences = this.preferences.bind(this);
-    this.minAge = this.minAge.bind(this);
-    this.maxAge = this.maxAge.bind(this);
     this.usernameSort = this.usernameSort.bind(this);
     this.display = this.display.bind(this);
   }
@@ -35,23 +30,7 @@ class Matches extends React.Component {
     this.props.fetchUsers(this.state.distance);
     this.props.fetchLikes(this.props.currentUser.id);
     this.props.fetchQuestions();
-    this.setState({ minAge: this.minAge(), maxAge: this.maxAge(), distance: 500 });
-  }
-
-  minAge() {
-    if (this.props.currentUser.age - 20 < 18) {
-      return 18;
-    } else {
-      return this.props.currentUser.age - 20;
-    }
-  }
-
-  maxAge(user) {
-    if (this.props.currentUser.age + 20 > 150) {
-      return 150;
-    } else {
-      return this.props.currentUser.age + 20;
-    }
+    this.setState({ distance: 500 });
   }
 
   disciplinePreference(user) {
@@ -91,7 +70,7 @@ class Matches extends React.Component {
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Looking for people who climb {indoorsoutdoors} between the ages of {this.state.minAge} and {this.state.maxAge}</p>
+        <p className="browse-large">Looking for people who climb {indoorsoutdoors} </p>
       </div>
     );
 
@@ -279,7 +258,9 @@ class Matches extends React.Component {
 
   display() {
     if (this.matchListItems().length === 0) {
-      return <Spinner />;
+      return (
+        <div className="no-matches">No matches found</div>
+      );
     } else {
       return this.matchListItems();
     }

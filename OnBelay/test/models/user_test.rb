@@ -10,8 +10,8 @@
 #  updated_at         :datetime         not null
 #  summary            :text
 #  prof_pic_id        :integer
-#  lat                :float
-#  lng                :float
+#  latitude           :float
+#  longitude          :float
 #  image_file_name    :string
 #  image_content_type :string
 #  image_file_size    :integer
