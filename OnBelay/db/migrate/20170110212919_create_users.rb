@@ -14,10 +14,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :prof_pic_id, index: true
       t.text :summary
       t.text :doing
-      t.text :good_at
-      t.text :favorites
-      t.text :thinking
-      t.text :friday
+  
 
       t.timestamps null: false
     end
