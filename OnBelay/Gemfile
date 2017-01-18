@@ -36,6 +36,7 @@ gem 'figaro'
 gem 'faker'
 gem 'geocoder'
 gem 'geokit-rails'
+gem 'httparty'
 
 group :production do
   gem 'rails_12factor'
