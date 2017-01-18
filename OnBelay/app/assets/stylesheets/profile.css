@@ -230,29 +230,39 @@
 }
 
 .profile-like-button {
-  border: 1px solid rgba(157,186,242,0.25);
-  border-radius: 5px;
-  height: 46px;
+  height: 40px;
   margin-right: 20px;
   width: 130px;
   text-align: center;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile-like-button:hover {
-  border: 1px solid rgba(228,237,253,0.75);
+  background-color: rgb(222, 222, 222);
+  background-color: rgba(222, 222, 222, 0.8);
 }
 
 .profile-message-button {
-  background: #444;
-  border: 1px solid rgba(157,186,242,0.25);
-  border-radius: 5px;
-  height: 46px;
+
   width: 130px;
   text-align: center;
+
+  height: 40px;
+  margin-right: 20px;
+  width: 130px;
+  text-align: center;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile-message-button:hover {
-  background: #fff;
+  background-color: rgb(222, 222, 222);
+  background-color: rgba(222, 222, 222, 0.8);
 }
 
 .block {
@@ -262,6 +272,11 @@
   width: 35px;
   background: #fff;
   border-radius: 25px;
+}
+
+.liked {
+  background-color: rgb(222, 222, 222);
+  background-color: rgba(222, 222, 222, 0.8);
 }
 
 .message-bubble {
@@ -285,8 +300,4 @@
 
 .message-bubble:hover > .pointer {
   border-top: 10px solid #aaa;
-}
-
-.liked {
-  background: #fff;
 }
