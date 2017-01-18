@@ -54,7 +54,7 @@ class MatchItem extends React.Component {
           <img src={this.props.user.image_url} className="browse-pic" onClick={ this.handleProfile }></img>
           <div className="match-text">
             <p className="username-text">{this.props.user.username}</p>
-            <p className="user-browse-info">{this.props.user.age} · {this.props.user.location}</p>
+            <p className="user-browse-info">{this.props.user.age} · {this.props.user.discipline}</p>
             <p className={"match-percentage" + this.matchColor()}>{this.props.matchPercentage}% Match</p>
             {this.likeButton()}
           </div>

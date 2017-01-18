@@ -87,15 +87,12 @@
   display: block;
   overflow: hidden;
   object-fit: cover;
-  transition: height 0.5s ease;
   height: 225px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
 .browse-pic:hover {
-  transition: height 0.5s ease;
-  height: 235px;
   cursor: pointer;
 }
 
