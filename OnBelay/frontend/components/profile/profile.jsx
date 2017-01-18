@@ -17,6 +17,7 @@ class Profile extends React.Component {
     this.profileActions = this.profileActions.bind(this);
     this.likeButton = this.likeButton.bind(this);
     this.handleImage = this.handleImage.bind(this);
+    this.cloudinate = this.cloudinate.bind(this);
     this.profPic = this.profPic.bind(this);
   }
 
@@ -56,6 +57,28 @@ class Profile extends React.Component {
       fileReader.readAsDataURL(file);
     }
   }
+
+  cloudinate(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'tomogasawara',
+        upload_preset: '',
+        theme: 'minimal',
+      },
+      (errors, imageInfo) => {
+        if (errors === null) {
+          let cloud_url = imageInfo[0].url;
+          this.setState({
+            image_url: cloud_url
+          });
+        }
+      }
+    );
+  }
+
+
+
 
   handleLike(e) {
     e.preventDefault();
