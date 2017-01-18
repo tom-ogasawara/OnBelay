@@ -27,7 +27,7 @@ demo_user_a = User.create(
   age: 35,
   location: "95060",
   summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
-  image: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg"
+  image: URI.parse("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg")
 )
 
 demo_user_b = User.create(
@@ -39,7 +39,7 @@ demo_user_b = User.create(
   age: 30,
   location: "94705",
   summary: "Waking up today I can’t help but look at the world with different eyes. Having achieved the first ascent of Burden of Dreams marks a new level in my climbing. With a handful of existing 8C+ boulders in the world, proposing 9A is the logical step.",
-  image: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg"
+  image: URI.parse("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg")
 )
 
 write questions
@@ -188,7 +188,7 @@ while total < 100 do
     age: age,
     location: location,
     summary: summary,
-    image: user_image_urls.sample
+    image: URI.parse(user_image_urls.sample)
   )
 
 
