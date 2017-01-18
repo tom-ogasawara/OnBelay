@@ -191,7 +191,9 @@
 
 .profile-tabs-container {
   border-bottom: 1px solid rgba(150, 150, 150, 0.5);
-  margin: 0 20px;
+  margin: 0 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
 }
 
 .profile-tabs {
@@ -219,7 +221,7 @@
 }
 
 .selected-li {
-  color: #444;
+  color: #222;
 }
 
 

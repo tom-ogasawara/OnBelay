@@ -1,0 +1,69 @@
+.main-messages {
+  background-image: url(https://res.cloudinary.com/tomogasawara/image/upload/e_auto_contrast/v1484257601/20161023_141952_tclrz6.jpg);
+  background-size: cover;
+  padding-bottom: 60px;
+  color: #fff;
+  min-height: 800px;
+}
+
+.message-heading {
+  position: relative;
+  height: auto;
+  padding-top: 27px;
+}
+
+.messages-title {
+  margin-left: 80px;
+  margin-top: 40px;
+  height: 40px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 35px;
+}
+
+.messages-tabs {
+  padding-left: -15px;;
+}
+
+.container-box {
+  margin: 0 30px;
+  position: relative;
+  height: 75px;
+  margin-top: 10px;
+  overflow: visible;
+  border-radius: 3px;
+  color: #333;
+  background-color: #fff;
+}
+
+.conversation-details {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+}
+
+.conversation-user {
+  margin: 0;
+}
+
+.other-user-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.conversation-last {
+  font-size: 13px;
+  color: #949aa6;
+  padding-top: 3px;
+}
+
+.conversation-updated {
+  float: right;
+  padding: 25px 20px 0;
+  font-size: 13px;
+  color: #949aa6;
+}
