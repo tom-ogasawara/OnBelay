@@ -28,7 +28,7 @@ class MatchItem extends React.Component {
   }
 
   likeButton() {
-    const star = Object.keys(this.props.like).length > 0 ? "★" : "☆";
+    const star = Object.keys(this.props.like).length > 0 ? "★ Liked" : "☆ Like";
 
     if (Object.keys(this.props.like).length > 0) {
       return <button className="browse-like-button browse-liked" onClick={ this.handleLike }>{star}</button>;

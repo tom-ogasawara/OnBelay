@@ -115,7 +115,7 @@ class Profile extends React.Component {
       }
     });
 
-    const star = liked ? "★" : "☆";
+    const star = liked ? "★ Liked" : "☆ Like";
 
     if (liked) {
       return <button className="profile-like-button liked" onClick={ this.handleLike }>{star}</button>;
