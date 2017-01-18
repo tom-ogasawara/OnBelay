@@ -58,7 +58,7 @@
 
 .conversation-last {
   font-size: 13px;
-  color: #949aa6;
+  color: #999;
   padding-top: 3px;
 }
 
@@ -66,5 +66,5 @@
   float: right;
   padding: 25px 20px 0;
   font-size: 13px;
-  color: #949aa6;
+  color: #999;
 }

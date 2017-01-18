@@ -1,0 +1,94 @@
+.main-chat {
+  background-image: url(https://res.cloudinary.com/tomogasawara/image/upload/e_auto_contrast/v1484257601/20161023_141952_tclrz6.jpg);
+  background-size: cover;
+  padding-bottom: 60px;
+  color: #fff;
+  min-height: 800px;
+}
+
+.chat-container {
+  margin: 0 200px 10px 200px;
+  min-width: 600px;
+  height: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.chat-other-user {
+  margin-left: 200px;
+  padding-top: 60px;
+  height: 40px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.chat-other-user:hover {
+  color: #ccc;
+}
+
+.chat-block {
+  display: block;
+}
+
+.chat-bubble {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 5px 0;
+}
+
+.user-styling {
+  background: #abc0ea;
+  float: right;
+}
+
+.other-user-styling {
+  background: #999;
+  float: left;
+}
+
+.chat-input {
+  margin: 0 200px 10px 200px;
+  min-width: 640px;
+  border-radius: 5px;
+}
+
+.form-input {
+  margin: 0 200px 10px 200px;
+  min-width: 640px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.chat-text-input {
+  width: calc(100% - 22px);
+  padding: 0 10px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  line-height: normal;
+  color: #444;
+}
+
+.chat-send-button {
+  color: #fff;
+  padding: 10px 20px;
+  float: right;
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.chat-send-button:hover {
+  background-color: rgb(222, 222, 222);
+  background-color: rgba(222, 222, 222, 0.8);
+}
