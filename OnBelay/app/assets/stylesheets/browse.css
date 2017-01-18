@@ -10,8 +10,8 @@
 .browse-large {
   padding-top: 40px;
   color: #fff;
+  font-size: 22px;
   text-shadow: 2px 2px 8px #000000;
-
 }
 
 .browse-smaller {
@@ -35,7 +35,6 @@
 .sort-text-container {
   float: right;
   padding: 10px 20px;
-  border-radius: 2px;
   margin-right: 20px;
 }
 
@@ -48,9 +47,6 @@
 
 .sort-dropdown {
   margin-left: 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 120px;
   height: 30px;
   padding-left: 10px;
@@ -76,8 +72,8 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 250px;
-  height: 350px;
+  width: 200px;
+  height: 303px;
   border-radius: 5px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
@@ -143,11 +139,11 @@
 }
 
 .green {
-  color: #13de39;
+  color: #07ed7a;
 }
 
 .orange {
-  color: #ffc107;
+  color: #fcd705;
 }
 
 .red {
