@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-// import Profile from '../profile/profile';
+import Profile from '../profile/profile';
 import NavBar from './nav_bar';
 
 

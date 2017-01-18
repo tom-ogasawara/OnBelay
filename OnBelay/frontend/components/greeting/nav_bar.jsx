@@ -25,7 +25,7 @@ class NavBar extends React.Component {
               <a href="/">onBelay</a>
             </h1>
             <ul className="nav-left group">
-              <li className="nav-browse">
+              <li className="nav-left-link">
                 <a href="/">Browse Matches</a>
               </li>
             </ul>

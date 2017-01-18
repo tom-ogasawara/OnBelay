@@ -161,12 +161,12 @@ class Profile extends React.Component {
       return(
         <main className="profile-main">
           <div className="profile-header">
-            <div className="inner-header group">
-              <div className="user-info group">
+            <div className="profile-header-content group">
+              <div className="user-basics group">
                 <div className="user-thumb">
                   {this.profPic()}
                 </div>
-                <div className="user-basics group">
+                <div className="user-info group">
                   <h2 className="user-name">
                     {this.props.profile.username}
                   </h2>

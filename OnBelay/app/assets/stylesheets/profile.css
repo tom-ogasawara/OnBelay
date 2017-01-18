@@ -2,41 +2,54 @@
 }
 
 .nav-bar {
-  height: 70px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.25);
   min-width: 800px;
-  border-bottom: 1px solid #ccc;
-  background: rgba(0, 0, 0, 0.8);
+  height: 70px;
+  background: #333;
+
 }
 
 .nav-logo {
   float: left;
   color: #fff;
-  font-size: 35px;
-  font-weight: bold;
-  margin: 12px 40px 0 40px;
+  font-size: 40px;
+  margin: 10px 40px 0 30px;
 }
 
 .nav-logo:hover {
-  color: #aaa;
+  color: #ccc;
 }
 
+.nav-prof-pic {
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav-prof-pic:hover {
+  box-shadow: 0px 0px 5px #fff;
+}
 
 .nav-left {
   float: left;
 }
 
-.nav-browse {
+.nav-left-link {
   float: left;
   color: #fff;
+  cursor: pointer;
   font-size: 16px;
-  line-height: 60px;
+  line-height: 61px;
   padding-top: 4px;
   margin-right: 40px;
-  cursor: pointer;
 }
 
-.nav-browse:hover {
-  color: #aaa;
+.nav-left-link:hover {
+  color: #ccc;
 }
 
 .nav-right {
@@ -47,29 +60,15 @@
 .nav-right-link {
   float: left;
   color: #fff;
+  cursor: pointer;
   font-size: 16px;
-  line-height: 60px;
+  line-height: 61px;
   padding-top: 4px;
   margin-left: 40px;
-  cursor: pointer;
 }
 
 .nav-right-link:hover {
-  color: #aaa;
-}
-
-.nav-prof-pic {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-top: 7px;
-  background: #ccc;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.nav-prof-pic:hover {
-  box-shadow: 0px 0px 5px #fff;
+  color: #ccc;
 }
 
 .profile-main {
@@ -84,17 +83,18 @@
 .profile-header {
   padding-top: 50px;
   margin-bottom: 30px;
+  background-image: url(https://res.cloudinary.com/tomogasawara/image/upload/e_auto_contrast/v1484257601/20161023_141952_tclrz6.jpg);
+  background-size: cover;
 }
 
-.inner-header {
+.profile-header-content {
   position: relative;
   padding-left: 80px;
   padding-right: 60px;
   margin: 0 auto;
-  width: 1000px;
 }
 
-.user-info {
+.user-basics {
   float: left;
   margin-left: -30px;
   margin-bottom: -30px;
@@ -109,7 +109,6 @@
 .profile-content {
   padding-top: 30px;
   min-height: 420px;
-  width: 1000px;
   padding-left: 80px;
   padding-right: 60px;
   margin-left: auto;
@@ -124,7 +123,7 @@
   height: 180px;
 }
 
-.user-basics {
+.user-info {
   position: relative;
   float: left;
   margin-top: 37px;
@@ -166,30 +165,32 @@
 
 .user-thumb:hover .update-image-block {
   border-radius: 5px;
-  background: #777;
+  background: #888;
   color: #fff;
   opacity: 1;
   cursor: pointer;
   line-height: 35px;
 }
 
+.user-thumb:hover .update-image-block:hover {
+  background: #444;
+}
+
 .user-name {
-  color: #fff;
-  font-weight: 300;
-  font-size: 34px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 35px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .user-details {
-  color: #fff;
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   line-height: 26px;
+  font-weight: lighter;
 }
 
 .profile-tabs-container {
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.5);
   margin: 0 20px;
 }
 
@@ -201,6 +202,7 @@
 }
 
 .tabs {
+  color: #999;
   font-weight: bold;
 }
 
@@ -212,12 +214,23 @@
   padding: 15px
 }
 
+.tabs > li:hover {
+  color: #000;
+}
+
+.selected-li {
+  color: #444;
+}
+
+
 .profile-actions {
   float: right;
   margin-top: 67px;
+  color: #fff;
 }
 
 .profile-like-button {
+  border: 1px solid rgba(157,186,242,0.25);
   border-radius: 5px;
   height: 46px;
   margin-right: 20px;
@@ -225,11 +238,21 @@
   text-align: center;
 }
 
+.profile-like-button:hover {
+  border: 1px solid rgba(228,237,253,0.75);
+}
+
 .profile-message-button {
+  background: #444;
+  border: 1px solid rgba(157,186,242,0.25);
   border-radius: 5px;
   height: 46px;
   width: 130px;
   text-align: center;
+}
+
+.profile-message-button:hover {
+  background: #fff;
 }
 
 .block {
@@ -237,6 +260,7 @@
   margin-top: 15px;
   height: 25px;
   width: 35px;
+  background: #fff;
   border-radius: 25px;
 }
 
@@ -249,20 +273,20 @@
   width: 0;
   height: 0;
   border-left: 0px solid transparent;
-  border-top: 10px solid #d6e1f9;
+  border-top: 10px solid #fff;
   border-right: 10px solid transparent;
   left: 22px;
   bottom: -6px;
 }
 
 .message-bubble:hover > .block {
-  background: #f5f8ff;
+  background: #aaa;
 }
 
 .message-bubble:hover > .pointer {
-  border-top: 10px solid #f5f8ff;
+  border-top: 10px solid #aaa;
 }
 
 .liked {
-  background: #efc417;
+  background: #fff;
 }
