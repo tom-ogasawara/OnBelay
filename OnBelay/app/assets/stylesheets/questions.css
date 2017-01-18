@@ -1,0 +1,266 @@
+.content-questions {
+  position: relative;
+  padding-top: 30px;
+  min-height: 100%;
+  width: 1000px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-questions {
+  width: 600px;
+  padding-right: 50px;
+  float: left;
+  position: relative;
+}
+
+.answered-questions {
+  position: relative;
+  width: 100%;
+}
+
+.question-answer {
+  font-size: 15px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.answered-question {
+  box-shadow: 0 2px 4px rgba(150, 150, 150, 0.35);
+  margin-bottom: 10px;
+  position: relative;
+  width: auto;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.question-content {
+  padding-bottom: 10px;
+  padding: 30px;
+}
+
+.question-content-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+.actual-title {
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #555;
+}
+
+.questions-header {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.show-questions-header {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #474d59;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.new-question {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(150, 150, 150, 0.35);
+  width: auto;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.question-form {
+  padding: 30px;
+  width: 450px;
+}
+
+.question-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+  color: #555;
+}
+
+.question-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.answers-container {
+}
+
+.answers-form {
+  display: block;
+  color: #555;
+}
+
+.user-answers {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.radio-answer {
+  display: block;
+  vertical-align: top;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 19px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-acceptables {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.acceptables-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+.acceptables-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.acceptables-answer {
+  display: block;
+  vertical-align: top;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 19px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-importance {
+  min-height: 90px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.importance-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+.importance-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.importance-radios {
+  position: relative;
+  height: 50px;
+}
+
+.importance-radios input[type="radio"] {
+  opacity: 0;
+  z-index: -1;
+}
+
+.importance-answer {
+  position: relative;
+  width: 140px;
+  float: left;
+  margin: 0;
+  margin-right: 5px;
+  text-align: center;
+  padding: 0;
+  background: none;
+  display: block;
+}
+
+.importance-answer:hover > .importance-bar {
+  background: #bcbdc1;
+}
+
+.importance-answer input[type="radio"]:checked ~ .importance-bar {
+  background: #444;
+}
+
+.importance-bar {
+  width: 140px;
+  height: 18px;
+  margin-bottom: 8px;
+  background: #eee;
+  border-radius: 2px;
+}
+
+.user-explanation {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.explanation-input-container {
+  width: 435px;
+  margin-bottom: 30px;
+}
+
+.explanation-textarea {
+  height: 66px;
+  width: calc(100% - 28px);
+  display: inline-block;
+  padding: 10px;
+  padding-right: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.answer-button {
+  background: #333;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 41px;
+  text-align: center;
+}
+
+.answer-button:hover {
+  background: #444;
+}
+
+.match-response {
+  color: #000;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
