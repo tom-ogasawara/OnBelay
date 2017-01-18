@@ -171,7 +171,7 @@ class Profile extends React.Component {
                     {this.props.profile.username}
                   </h2>
                   <h3 className="user-details">
-                    {this.props.profile.age} • {this.props.profile.location} • {this.props.profile.indoorsoutdoors} • {this.props.profile.discipline}
+                    {this.props.profile.age} • {this.props.profile.indoorsoutdoors} • {this.props.profile.discipline}
                   </h3>
                 </div>
               </div>
