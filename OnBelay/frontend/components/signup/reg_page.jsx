@@ -51,7 +51,7 @@ class RegPage extends React.Component {
         </div>
         <footer className="footer group">
           <p className="footer-copy-styling">
-            {"© onBelay 2017"}
+            © onBelay 2017
           </p>
         </footer>
       </div>
