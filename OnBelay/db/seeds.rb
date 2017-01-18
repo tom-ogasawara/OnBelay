@@ -27,7 +27,7 @@ demo_user_a = User.create(
   age: 35,
   location: "95060",
   summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
-  image: open("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg")
+  image: File.open("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg")
 )
 
 demo_user_b = User.create(
@@ -164,6 +164,7 @@ total = 0
 
 user_images = HTTParty.get('https://pixabay.com/api/?key=4030205-09edb77b80f0f13b40ea34bea&q=rock+climbing&image_type=photo')
 user_image_urls = user_images["hits"].map { |picture| picture["webformatURL"] }
+
 
 while total < 100 do
   user = nil;
