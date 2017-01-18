@@ -42,7 +42,7 @@ demo_user_b = User.create(
   image: URI.parse("http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg")
 )
 
-write questions
+# write questions
 
 question1 = Question.create(title: "How long have you been climbing?")
 
