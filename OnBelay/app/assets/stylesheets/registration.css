@@ -136,21 +136,6 @@
   background-color: rgba(222, 222, 222, 0.8);
 }
 
-.bottom-section {
-}
-
-.image-container {
-  text-align: center;
-  min-width: 800px;
-  color: #999;
-  display: flex;
-  justify-content: center;
-}
-
-.splash-sub-image {
-  width: 200px;
-  margin: 70px;
-}
 
 .footer {
   border-top: 1px solid #ccc;

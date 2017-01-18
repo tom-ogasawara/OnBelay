@@ -49,28 +49,6 @@ class RegPage extends React.Component {
             <InitialRegistrationContainer />
           </div>
         </div>
-        <div className="bottom-section group">
-          <div className="image-container group">
-            <div className="splash-sub-image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
-              <p>
-                Temp filler text 1
-              </p>
-            </div>
-            <div className="splash-sub-image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
-              <p>
-                Temp filler text 2
-              </p>
-            </div>
-            <div className="splash-sub-image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rock_climbing_vector.svg/2000px-Rock_climbing_vector.svg.png"></img>
-              <p>
-                Temp filler text 3
-              </p>
-            </div>
-          </div>
-        </div>
         <footer className="footer group">
           <p className="footer-copy-styling">
             {"© onBelay 2017"}
