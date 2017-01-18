@@ -119,7 +119,7 @@
   vertical-align: top;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   line-height: 19px;
 }
 
@@ -152,7 +152,7 @@ input[type="radio"] {
   vertical-align: top;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   line-height: 19px;
 }
 
@@ -204,7 +204,7 @@ input[type="checkbox"] {
 }
 
 .importance-answer:hover > .importance-bar {
-  background: #bcbdc1;
+  background: #bbb;
 }
 
 .importance-answer input[type="radio"]:checked ~ .importance-bar {
@@ -254,7 +254,7 @@ input[type="checkbox"] {
 }
 
 .answer-button:hover {
-  background: #444;
+  background: #555;
 }
 
 .match-response {
