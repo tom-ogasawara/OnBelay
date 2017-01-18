@@ -115,6 +115,105 @@
   margin-right: auto;
 }
 
+.about-block {
+  margin-bottom: 45px;
+  color: #474d59;
+  font-size: 16px;
+}
+
+.about-button {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.about-normal {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.about-title {
+  float: left;
+}
+
+
+.about-text {
+  display: block;
+  margin-top: 14px;
+}
+
+.placeholder-text {
+  margin-top: 14px;
+  color: #ccc;
+}
+
+.edit-text {
+  display: block;
+  height: 262px;
+  width: 500px;
+  margin: 20px 10px 0 0;
+}
+
+.inside-text {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 458px;
+  height: 158px;
+  background: #fff;
+}
+
+.inside-text:focus {
+  border: 1px solid #888;
+}
+
+.save-button {
+  text-align: center;
+  height: 45px;
+  width: 110px;
+  border: 1px solid #ccc;
+  line-height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 15px;
+  float: right;
+}
+
+.save-button:hover {
+  background-color: #999;
+}
+
+.cancel-button {
+  text-align: center;
+  height: 45px;
+  width: 110px;
+  border: 1px solid #ccc;
+  line-height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  margin-top: 10px;
+  float: right;
+}
+
+.cancel-button:hover {
+  background-color: #999;
+}
+
 .user-thumb {
   float: left;
   position: relative;
