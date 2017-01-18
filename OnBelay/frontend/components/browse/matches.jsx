@@ -207,11 +207,7 @@ class Matches extends React.Component {
       } else {
         return this.props.users[a.user].age - this.props.users[b.user].age;
       }
-    }).filter((user) =>
-      this.props.users[user.user].age > this.state.minAge &&
-      this.props.users[user.user].age < this.state.maxAge &&
-      this.disciplinePreference(user)
-    );
+    });
   }
 
 
