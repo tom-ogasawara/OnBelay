@@ -29,7 +29,7 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  color: #474d59;
+  color: #444;
 }
 
 .sort-text-container {
@@ -109,7 +109,7 @@
 }
 
 .username-text {
-  color: #474d59;
+  color: #444;
   font-size: 22px;
   width: 100%;
   position: relative;
@@ -119,17 +119,17 @@
 
 .user-browse-info {
   font-size: 15px;
-  color: #949aa6;
+  color: #999;
   margin-bottom: 5px;
 }
 
 .match-percentage {
   font-size: 20px;
-  color: #474d59;
+  color: #444;
 }
 
 .browse-like-button {
-  border: 1px solid rgba(157,186,242,0.25);
+  border: 1px solid rgba(222, 222, 222, 0.25);
   border-radius: 5px;
   margin-top: 5px;
   height: 40px;
@@ -138,13 +138,12 @@
 }
 
 .browse-like-button:hover {
-  border: 1px solid #ccd0d9;
-  color: #5e6573;
-  background: rgba(174,180,191,0.1);
+  color: #fff;
+  background: #000;
 }
 
 .browse-liked {
-  background: #efc417;
+  background: #ccc;
   color: #fff;
 }
 

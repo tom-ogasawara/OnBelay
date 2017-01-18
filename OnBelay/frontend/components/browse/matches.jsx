@@ -238,7 +238,6 @@ class Matches extends React.Component {
       <select className="sort-dropdown" onChange={ this.handleSort }>
         <option value="match percentage">Match Percentage</option>
         <option value="username">Username</option>
-        <option value="age">Age</option>
       </select>
     );
   }
@@ -247,11 +246,11 @@ class Matches extends React.Component {
     return (
       <select className="sort-dropdown" onChange={ this.handleDistance }>
         <option value="500">Any</option>
-        <option value="2">2</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
+        <option value="2">2 miles</option>
+        <option value="5">5 miles</option>
+        <option value="10">10 miles</option>
+        <option value="50">50 miles</option>
+        <option value="100">100 miles</option>
       </select>
     );
   }
