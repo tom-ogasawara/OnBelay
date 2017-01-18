@@ -33,12 +33,7 @@ class NavBar extends React.Component {
           <div>
             <ul className="nav-right group">
               <li className="nav-right-link">
-                <a href="#/conversations">
-                  <div className="message-bubble">
-                    <div className="block"></div>
-                    <div className="pointer"></div>
-                  </div>
-                </a>
+                <a href="#/conversations">Messages</a>
               </li>
               <li className="nav-right-link">
                 <a href={"#/profile/"+this.props.currentUser.id}>

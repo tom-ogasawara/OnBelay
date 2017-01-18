@@ -280,26 +280,3 @@
   background-color: rgb(255, 199, 0);
   background-color: rgba(255, 199, 0, 0.8);
 }
-
-.message-bubble {
-  position: relative;
-}
-
-.pointer {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 0px solid transparent;
-  border-top: 10px solid #fff;
-  border-right: 10px solid transparent;
-  left: 22px;
-  bottom: -6px;
-}
-
-.message-bubble:hover > .block {
-  background: #aaa;
-}
-
-.message-bubble:hover > .pointer {
-  border-top: 10px solid #aaa;
-}
