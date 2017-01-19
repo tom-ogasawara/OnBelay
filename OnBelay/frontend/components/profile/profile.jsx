@@ -16,7 +16,6 @@ class Profile extends React.Component {
     this.handleMessage = this.handleMessage.bind(this);
     this.profileActions = this.profileActions.bind(this);
     this.likeButton = this.likeButton.bind(this);
-    this.handleImage = this.handleImage.bind(this);
     this.cloudinate = this.cloudinate.bind(this);
     this.profPic = this.profPic.bind(this);
   }
@@ -40,30 +39,12 @@ class Profile extends React.Component {
     }
   }
 
-  handleImage(e) {
-    e.preventDefault();
-
-    const user = this.props.profile;
-    const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = () => {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-      const formData = new FormData();
-      formData.append("user[image]", file);
-      this.props.updateImage(formData, user);
-    };
-
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
-  }
-
   cloudinate(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(
       {
         cloud_name: 'tomogasawara',
-        upload_preset: '',
+        upload_preset: 'qpdvaovq',
         theme: 'minimal',
       },
       (errors, imageInfo) => {
@@ -166,7 +147,7 @@ class Profile extends React.Component {
         <div>
           <img className="prof-pic" src={this.state.imageUrl} ></img>
           <label htmlFor="update-input" className="update-image-block">Update</label>
-          <input id="update-input" type="file" onChange={ this.handleImage } />
+          <input id="update-input" type="file" onChange={ this.cloudinate } />
         </div>
       );
     } else {
