@@ -5,16 +5,10 @@ class MatchItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleProfile = this.handleProfile.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.likeButton = this.likeButton.bind(this);
+    this.handleProfile = this.handleProfile.bind(this);
     this.matchColor = this.matchColor.bind(this);
-  }
-
-  handleProfile(e) {
-    e.preventDefault();
-
-    this.props.router.push(`/profile/${this.props.user.id}`);
   }
 
   handleLike(e) {
@@ -25,6 +19,12 @@ class MatchItem extends React.Component {
     } else {
       this.props.createLike({from_id: this.props.currentUser.id, to_id: this.props.user.id});
     }
+  }
+
+  handleProfile(e) {
+    e.preventDefault();
+
+    this.props.router.push(`/profile/${this.props.user.id}`);
   }
 
   likeButton() {
