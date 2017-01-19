@@ -69,8 +69,8 @@ class Matches extends React.Component {
     }
 
     return (
-      <div className="preferences-bar">
-        <p className="browse-large">Searching for people who climb {climbLocation} </p>
+      <div className="browse-header">
+        <p className="browse-header-text">Searching for people who climb {climbLocation} </p>
       </div>
     );
 

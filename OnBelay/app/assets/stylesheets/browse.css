@@ -1,4 +1,5 @@
-.preferences-bar {
+
+.browse-header {
   height: 120px;
   width: 100%;
   background-image: url(https://res.cloudinary.com/tomogasawara/image/upload/e_auto_contrast/v1484257601/20161023_141952_tclrz6.jpg);
@@ -7,64 +8,11 @@
   text-align: center;
 }
 
-.browse-large {
+.browse-header-text {
   padding-top: 40px;
   color: #fff;
   font-size: 22px;
   text-shadow: 2px 2px 8px #000000;
-}
-
-.browse-smaller {
-  padding-top: 2px;
-  font-size: 17px;
-}
-
-.browse-smallest {
-  padding-top: 2px;
-  font-size: 14px;
-}
-
-.sort-box {
-  width: 900px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #444;
-}
-
-.sort-text-container {
-  float: right;
-  padding: 10px 20px;
-  margin-right: 20px;
-}
-
-.distance-container {
-  float: right;
-  padding: 10px 20px;
-  border-radius: 2px;
-  margin-right: 20px;
-}
-
-.sort-dropdown {
-  margin-left: 10px;
-  width: 120px;
-  height: 30px;
-  padding-left: 10px;
-}
-
-.match-container {
-  width: 900px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.match-item-wrapper {
-  float: left;
-  position: relative;
-  width: 280px;
-  height: 385px;
-  margin: 0 10px 40px 10px;
 }
 
 .match-item {
@@ -76,6 +24,28 @@
   height: 310px;
   border-radius: 5px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.match-item-wrapper {
+  float: left;
+  position: relative;
+  width: 280px;
+  height: 385px;
+  margin: 0 10px 40px 10px;
+}
+
+.match-container {
+  width: 900px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.match-text {
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .browse-pic {
@@ -93,13 +63,6 @@
   transition: height 0.5s ease;
   height: 230px;
   cursor: pointer;
-}
-
-.match-text {
-  position: relative;
-  top: 0;
-  width: 100%;
-  text-align: center;
 }
 
 .username-text {
@@ -141,14 +104,42 @@
   color: #fff;
 }
 
-.green {
+.high-match-percentage {
   color: #07ed7a;
 }
 
-.orange {
+.medium-match-percentage {
   color: #fcd705;
 }
 
-.red {
+.low-match-percentage {
   color: #f44336;
+}
+
+.sort-box {
+  width: 900px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #444;
+}
+
+.sort-text-container {
+  float: right;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.distance-container {
+  float: right;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-right: 20px;
+}
+
+.sort-dropdown {
+  margin-left: 10px;
+  width: 120px;
+  height: 30px;
+  padding-left: 10px;
 }
