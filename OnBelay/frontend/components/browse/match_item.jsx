@@ -8,7 +8,7 @@ class MatchItem extends React.Component {
     this.handleLike = this.handleLike.bind(this);
     this.likeButton = this.likeButton.bind(this);
     this.handleProfile = this.handleProfile.bind(this);
-    this.matchColor = this.matchColor.bind(this);
+    this.matchTextColor = this.matchTextColor.bind(this);
   }
 
   handleLike(e) {
@@ -37,7 +37,7 @@ class MatchItem extends React.Component {
     }
   }
 
-  matchColor() {
+  matchTextColor() {
     if (this.props.matchPercentage > 60) {
       return "high-match-percentage";
     } else if (this.props.matchPercentage > 40) {
@@ -55,7 +55,7 @@ class MatchItem extends React.Component {
           <div className="match-text">
             <p className="username-text">{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.age} · {this.props.user.discipline}</p>
-            <p className={"match-percentage" + this.matchColor()}>{this.props.matchPercentage}% Match</p>
+            <p className={"match-percentage" + this.matchTextColor()}>{this.props.matchPercentage}% Match</p>
             {this.likeButton()}
           </div>
         </div>
