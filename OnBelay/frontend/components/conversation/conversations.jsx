@@ -63,8 +63,8 @@ class Conversations extends React.Component {
     }
 
     return(
-      <div className="main-messages">
-        <div className="message-heading">
+      <div className="messages-main">
+        <div className="message-header">
           <h1 className="messages-title">Messages</h1>
         </div>
         <TabsContainer
