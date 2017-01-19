@@ -7,15 +7,15 @@ import Matches from './matches';
 
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
-  likes: state.likes.likes,
   users: state.users.users,
-  questions: state.questions.questions
+  questions: state.questions.questions,
+  likes: state.likes.likes
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchUsers: (distance) => dispatch(fetchUsers(distance)),
-  fetchLikes: (from_id) => dispatch(fetchLikes(from_id)),
   fetchQuestions: () => dispatch(fetchQuestions()),
+  fetchLikes: (from_id) => dispatch(fetchLikes(from_id)),
   createLike: (like) => dispatch(createLike(like)),
   destroyLike: (like_id) => dispatch(destroyLike(like_id)),
 });
