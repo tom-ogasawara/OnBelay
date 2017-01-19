@@ -12,3 +12,11 @@ export const updateProfile = (user) => {
     data: { user }
   });
 };
+
+export const updateImage = (formData, user) => {
+  return $.ajax({
+    method: "PATCH",
+    url: `api/users/${user.id}`,
+    data: { user }
+  });
+};
