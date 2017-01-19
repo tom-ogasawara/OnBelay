@@ -8,13 +8,13 @@
 
 # reset DB
 
-User.destroy_all
-Like.destroy_all
-Message.destroy_all
-Conversation.destroy_all
-Question.destroy_all
-Answer.destroy_all
-Response.destroy_all
+# User.destroy_all
+# Like.destroy_all
+# Message.destroy_all
+# Conversation.destroy_all
+# Question.destroy_all
+# Answer.destroy_all
+# Response.destroy_all
 
 # create two demo users
 
@@ -96,7 +96,7 @@ answer25 = Answer.create(question_id: question8.id, body: "Fun", order: 2)
 
 question9 = Question.create(title: "What gym do you climb at?")
 
-answer26 = Answer.create(question_id: question9.id, body: "Brigdes", order: 1)
+answer26 = Answer.create(question_id: question9.id, body: "Bridges", order: 1)
 answer27 = Answer.create(question_id: question9.id, body: "Planet Granite", order: 2)
 answer28 = Answer.create(question_id: question9.id, body: "Touchstone", order: 3)
 answer29 = Answer.create(question_id: question9.id, body: "Other", order: 4)
