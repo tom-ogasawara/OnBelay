@@ -144,8 +144,8 @@ end
 
 # set up user params
 
-prof_pics = HTTParty.get('https://pixabay.com/api/?key=4030205-09edb77b80f0f13b40ea34bea&q=rock+climber&image_type=photo')
-urls = prof_pics["hits"].map { |pic| pic["webformatURL"] }
+generated_profile_pics = HTTParty.get('https://pixabay.com/api/?key=4030205-09edb77b80f0f13b40ea34bea&q=rock+climber&image_type=photo')
+urls = generated_profile_pics["hits"].map { |pic| pic["webformatURL"] }
 
 disciplines = ["climb", "boulder", "topRope", "lead"]
 climbing_location = ["everywhere", "indoors", "outdoors"]
@@ -184,7 +184,7 @@ while total < 50 do
     age: age,
     location: location,
     summary: summary,
-    image_url:
+    image_url: urls.sample
   )
 
 
