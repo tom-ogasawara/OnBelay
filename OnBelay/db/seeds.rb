@@ -27,7 +27,7 @@ demo_user_a = User.create(
   age: 35,
   location: "95060",
   summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
-  image_url: "https://cloudinary.com/console/media_library#/dialog/image/upload/sharma_user_image_de1qct"
+  image_url: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg"
 )
 
 demo_user_b = User.create(
@@ -39,6 +39,7 @@ demo_user_b = User.create(
   age: 30,
   location: "94705",
   summary: "Waking up today I can’t help but look at the world with different eyes. Having achieved the first ascent of Burden of Dreams marks a new level in my climbing. With a handful of existing 8C+ boulders in the world, proposing 9A is the logical step.",
+  image_url: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg"
 )
 
 # write questions
@@ -113,9 +114,6 @@ answer34 = Answer.create(question_id: question11.id, body: "One or two", order: 
 answer35 = Answer.create(question_id: question11.id, body: "Three or more", order: 3)
 
 
-
-
-
 count = 0
 
 Question.all.each do |question|
@@ -146,6 +144,9 @@ end
 
 # set up user params
 
+prof_pics = HTTParty.get('https://pixabay.com/api/?key=4030205-09edb77b80f0f13b40ea34bea&q=rock+climber&image_type=photo')
+urls = prof_pics["hits"].map { |pic| pic["webformatURL"] }
+
 disciplines = ["climb", "boulder", "topRope", "lead"]
 climbing_location = ["everywhere", "indoors", "outdoors"]
 zips = ["96099", "96094", "96089", "96080", "96067", "96002", "95927",
@@ -161,7 +162,7 @@ total = 0
 
 # seed users
 
-while total < 20 do
+while total < 50 do
   user = nil;
 
   username = Faker::Internet.user_name
@@ -183,6 +184,7 @@ while total < 20 do
     age: age,
     location: location,
     summary: summary,
+    image_url:
   )
 
 
@@ -215,6 +217,11 @@ while total < 20 do
 
 end
 
+conversation2 = Conversation.create(
+  user_one_id: demo_user_b.id,
+  user_two_id: demo_user_a.id
+)
+
 conversation1 = Conversation.create(
   user_one_id: demo_user_a.id,
   user_two_id: demo_user_b.id
@@ -236,4 +243,22 @@ Message.create(
   author_id: demo_user_a.id,
   thread_id: conversation1.id,
   body: "I've been wanting to climb Halfdome for a while."
+)
+
+Message.create(
+  author_id: demo_user_b.id,
+  thread_id: conversation1.id,
+  body: "Hey congratulations on your new gym opening!"
+)
+
+Message.create(
+  author_id: demo_user_a.id,
+  thread_id: conversation1.id,
+  body: "Thank you! If you're ever in the area let me know, I'd love to show you around."
+)
+
+Message.create(
+  author_id: demo_user_b.id,
+  thread_id: conversation1.id,
+  body: "I definitely will! Thanks for the offer."
 )
