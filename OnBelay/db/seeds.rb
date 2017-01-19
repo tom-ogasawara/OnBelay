@@ -182,7 +182,6 @@ while total < 100 do
     age: age,
     location: location,
     summary: summary,
-    image: open(user_image_urls.sample)
   )
 
 
