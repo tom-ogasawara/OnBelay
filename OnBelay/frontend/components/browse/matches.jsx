@@ -11,26 +11,26 @@ class Matches extends React.Component {
       sortBy: "match percentage"
     };
 
+    this.display = this.display.bind(this);
+    this.handleSort = this.handleSort.bind(this);
+    this.sortedUsers = this.sortedUsers.bind(this);
+    this.sortOptions = this.sortOptions.bind(this);
+    this.usernameSort = this.usernameSort.bind(this);
+    this.distanceOptions = this.distanceOptions.bind(this);
+    this.handleDistance = this.handleDistance.bind(this);
+    this.preferences = this.preferences.bind(this);
+    this.disciplinePreference = this.disciplinePreference.bind(this);
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
     this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
     this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
     this.matchListItems = this.matchListItems.bind(this);
-    this.handleSort = this.handleSort.bind(this);
-    this.sortedUsers = this.sortedUsers.bind(this);
-    this.sortOptions = this.sortOptions.bind(this);
-    this.distanceOptions = this.distanceOptions.bind(this);
-    this.handleDistance = this.handleDistance.bind(this);
-    this.disciplinePreference = this.disciplinePreference.bind(this);
-    this.preferences = this.preferences.bind(this);
-    this.usernameSort = this.usernameSort.bind(this);
-    this.display = this.display.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchUsers(this.state.distance);
     this.props.fetchLikes(this.props.currentUser.id);
     this.props.fetchQuestions();
-    this.setState({ distance: 500 });
+    this.setState({ distance: 1000 });
   }
 
   disciplinePreference(user) {
@@ -75,19 +75,20 @@ class Matches extends React.Component {
     );
 
   }
-  handleSort(e) {
-    this.setState({ sortBy: e.currentTarget.value });
-  }
 
   handleDistance(e) {
     this.props.fetchUsers(parseInt(e.currentTarget.value));
     this.setState({ distance: parseInt(e.currentTarget.value) });
   }
 
+  handleSort(e) {
+    this.setState({ sortBy: e.currentTarget.value });
+  }
+
   findMatchPercentage(user) {
-    let currentUserPoints = 0;
+    let currentUserScore = 0;
     let currentUserQuestionTotal = 0;
-    let otherUserPoints = 0;
+    let otherUserScore = 0;
     let otherUserQuestionTotal = 0;
 
     const userQuestions = this.props.currentUser.questions.map((question) => {
@@ -109,14 +110,14 @@ class Matches extends React.Component {
     }
 
     commonQuestions.forEach((question) => {
-      currentUserPoints += this.calculateQuestionScore(question, this.props.currentUser, user);
+      currentUserScore += this.calculateQuestionScore(question, this.props.currentUser, user);
       currentUserQuestionTotal += this.calculateQuestionImportance(question, this.props.currentUser);
-      otherUserPoints += this.calculateQuestionScore(question, user, this.props.currentUser);
+      otherUserScore += this.calculateQuestionScore(question, user, this.props.currentUser);
       otherUserQuestionTotal += this.calculateQuestionImportance(question, user);
     });
 
-    const currentUserPercent = (currentUserPoints / currentUserQuestionTotal);
-    const otherUserPercent = (otherUserPoints / otherUserQuestionTotal);
+    const currentUserPercent = (currentUserScore / currentUserQuestionTotal);
+    const otherUserPercent = (otherUserScore / otherUserQuestionTotal);
 
     const multiplied = currentUserPercent * otherUserPercent;
     const root = commonQuestions.length;
@@ -241,7 +242,7 @@ class Matches extends React.Component {
   distanceOptions() {
     return (
       <select className="sort-dropdown" onChange={ this.handleDistance }>
-        <option value="500">Any</option>
+        <option value="1000">Any</option>
         <option value="2">2 miles</option>
         <option value="5">5 miles</option>
         <option value="10">10 miles</option>
