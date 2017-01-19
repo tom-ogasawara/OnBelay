@@ -4,15 +4,15 @@ import Chat from './chat';
 
 
 const mapStateToProps = (state) => ({
-  profile: state.currentProfile.currentProfile,
   currentUser: state.session.currentUser,
+  profile: state.currentProfile.currentProfile,
   currentConversation: state.conversations.currentConversation
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchSingleConversation: (conversation_id) => dispatch(fetchSingleConversation(conversation_id)),
-  createMessage: (message) => dispatch(createMessage(message)),
   receiveCurrentConversation: (conversation) => dispatch(receiveCurrentConversation(conversation)),
+  createMessage: (message) => dispatch(createMessage(message)),
 });
 
 export default connect(
