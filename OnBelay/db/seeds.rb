@@ -247,18 +247,18 @@ Message.create(
 
 Message.create(
   author_id: demo_user_b.id,
-  thread_id: conversation1.id,
+  thread_id: conversation2.id,
   body: "Hey congratulations on your new gym opening!"
 )
 
 Message.create(
   author_id: demo_user_a.id,
-  thread_id: conversation1.id,
+  thread_id: conversation2.id,
   body: "Thank you! If you're ever in the area let me know, I'd love to show you around."
 )
 
 Message.create(
   author_id: demo_user_b.id,
-  thread_id: conversation1.id,
+  thread_id: conversation2.id,
   body: "I definitely will! Thanks for the offer."
 )
