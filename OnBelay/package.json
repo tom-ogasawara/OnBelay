@@ -1,6 +1,6 @@
 {
   "name": "OnBelay",
-  "description": "## OnBelay.io is a web application built to provide rock climbers in the San Francisco Bay Area an easy and effective way to meet and climb with other people.",
+  "description": "[www.onbelay.io][heroku]",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "",
