@@ -8,7 +8,7 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageFile: null,
+      // imageFile: null,
       imageUrl: null
     };
 
@@ -54,9 +54,12 @@ class Profile extends React.Component {
             imageUrl: cloud_url
           });
           const user = this.props.profile;
-          const formData = new FormData();
-          formData.append("user[image]", cloud_url);
-          this.props.updateImage(formData, user);
+
+          // const formData = new FormData();
+          // formData.append("user[image]", cloud_url);
+          this.props.updateProfile(user);
+          // console.log(cloud_url);
+          // console.log(this.state);
         }
       }
     );

@@ -13,10 +13,10 @@ export const updateProfile = (user) => {
   });
 };
 
-export const updateImage = (formData, user) => {
-  return $.ajax({
-    method: "PATCH",
-    url: `api/users/${user.id}`,
-    data: { formData, user }
-  });
-};
+// export const updateImage = (formData, user) => {
+//   return $.ajax({
+//     method: "PATCH",
+//     url: `api/users/${user.id}`,
+//     data: { user }
+//   });
+// };

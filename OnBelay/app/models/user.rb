@@ -21,6 +21,7 @@
 #  location           :string           not null
 #  email              :string           not null
 #  age                :integer          not null
+#  image_url          :string
 #
 
 class User < ActiveRecord::Base
@@ -44,8 +45,8 @@ class User < ActiveRecord::Base
                    lat_column_name: :latitude,
                    lng_column_name: :longitude
 
-  has_attached_file :image, default_url: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685697/default_user_image_ckwjm2.png"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  # has_attached_file :image, default_url: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685697/default_user_image_ckwjm2.png"
+  # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   has_many :messages, {
     class_name: :Message,

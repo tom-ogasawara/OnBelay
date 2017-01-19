@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchCurrentProfile, updateImage } from '../../actions/profile_actions';
+import { fetchCurrentProfile, updateImage, updateProfile } from '../../actions/profile_actions';
 import { logout } from '../../actions/session_actions';
 import { fetchConversations, createConversation } from '../../actions/conversation_actions';
 import { fetchLikes, createLike, destroyLike } from '../../actions/like_actions';
@@ -26,6 +26,7 @@ const mapDispatchToProps = dispatch => ({
   createLike: (like) => dispatch(createLike(like)),
   destroyLike: (like_id) => dispatch(destroyLike(like_id)),
   updateImage: (formData, user) => dispatch(updateImage(formData, user)),
+  updateProfile: (user) => dispatch(updateProfile(user)),
   fetchQuestions: () => dispatch(fetchQuestions()),
   fetchResponses: (user_id) => dispatch(fetchResponses(user_id))
 });

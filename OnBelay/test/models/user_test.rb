@@ -21,6 +21,7 @@
 #  location           :string           not null
 #  email              :string           not null
 #  age                :integer          not null
+#  image_url          :string
 #
 
 require 'test_helper'

@@ -27,6 +27,7 @@ demo_user_a = User.create(
   age: 35,
   location: "95060",
   summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
+  image_url: "https://cloudinary.com/console/media_library#/dialog/image/upload/sharma_user_image_de1qct"
 )
 
 demo_user_b = User.create(
