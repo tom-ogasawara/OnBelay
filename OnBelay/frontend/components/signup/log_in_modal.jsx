@@ -42,18 +42,18 @@ class LogInModal extends React.Component {
     return(
       <div className="modal-background" onClick={ this.handleClick }>
         <form className="modal-content" onSubmit={ this.handleSubmit } onClick={ e => e.stopPropagation() }>
-          <h2 className="sign-in-header">Sign in</h2>
+          <h2 className="modal-title">Sign in</h2>
           <input type="text"
             value={this.state.username}
             onChange={this.update("username")}
             placeholder="Username"
-            className="sign-in-username-box"/><br></br>
+            className="username-field"/><br></br>
 
           <input type="password"
             value={this.state.password}
             onChange={this.update("password")}
             placeholder="Password"
-            className="sign-in-password-box"/><br></br>
+            className="password-field"/><br></br>
 
           <p className="sign-in-errors">{this.props.errors.base}</p>
 
