@@ -1,3 +1,10 @@
+.main-questions {
+  width: 600px;
+  padding-right: 50px;
+  float: left;
+  position: relative;
+}
+
 .content-questions {
   position: relative;
   padding-top: 30px;
@@ -9,22 +16,9 @@
   margin-right: auto;
 }
 
-.main-questions {
-  width: 600px;
-  padding-right: 50px;
-  float: left;
-  position: relative;
-}
-
 .answered-questions {
   position: relative;
   width: 100%;
-}
-
-.question-answer {
-  font-size: 15px;
-  color: #444;
-  margin-top: 10px;
 }
 
 .answered-question {
@@ -34,6 +28,12 @@
   width: auto;
   background: #fff;
   border-radius: 3px;
+}
+
+.question-answer {
+  font-size: 15px;
+  color: #444;
+  margin-top: 10px;
 }
 
 .question-content {
