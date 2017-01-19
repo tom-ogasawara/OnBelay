@@ -13,12 +13,12 @@ class Matches extends React.Component {
 
     this.display = this.display.bind(this);
     this.handleSort = this.handleSort.bind(this);
-    this.sortedUsers = this.sortedUsers.bind(this);
-    this.sortOptions = this.sortOptions.bind(this);
-    this.usernameSort = this.usernameSort.bind(this);
-    this.distanceOptions = this.distanceOptions.bind(this);
     this.handleDistance = this.handleDistance.bind(this);
-    this.preferences = this.preferences.bind(this);
+    this.sortParams = this.sortParams.bind(this);
+    this.distanceParams = this.distanceParams.bind(this);
+    this.sortedUsers = this.sortedUsers.bind(this);
+    this.sortByUsername = this.sortByUsername.bind(this);
+    this.locationPreference = this.locationPreference.bind(this);
     this.disciplinePreference = this.disciplinePreference.bind(this);
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
     this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
@@ -30,7 +30,7 @@ class Matches extends React.Component {
     this.props.fetchUsers(this.state.distance);
     this.props.fetchLikes(this.props.currentUser.id);
     this.props.fetchQuestions();
-    this.setState({ distance: 1000 });
+    this.setState({ distance: 2500 });
   }
 
   disciplinePreference(user) {
@@ -42,22 +42,16 @@ class Matches extends React.Component {
         this.props.users[user.user].discipline === "lead"
       );
     } else if (this.props.currentUser.discipline === "boulder") {
-      return (
-        this.props.users[user.user].discipline === "boulder"
-      );
+      return (this.props.users[user.user].discipline === "boulder");
     } else if (this.props.currentUser.discipline === "topRope") {
-      return (
-        this.props.users[user.user].discipline === "topRope"
-      );
+      return (this.props.users[user.user].discipline === "topRope");
     } else if (this.props.currentUser.discipline === "lead") {
-      return (
-        this.props.users[user.user].discipline === "lead"
-      );
+      return (this.props.users[user.user].discipline === "lead");
     }
   }
 
 
-  preferences() {
+  locationPreference() {
     let climbLocation;
 
     if (this.props.currentUser.indoorsoutdoors === "indoors") {
@@ -87,9 +81,9 @@ class Matches extends React.Component {
 
   findMatchPercentage(user) {
     let currentUserScore = 0;
-    let currentUserQuestionTotal = 0;
     let otherUserScore = 0;
-    let otherUserQuestionTotal = 0;
+    let currentUserQuestionScore = 0;
+    let otherUserQuestionScore = 0;
 
     const userQuestions = this.props.currentUser.questions.map((question) => {
       return question.id;
@@ -99,32 +93,34 @@ class Matches extends React.Component {
       return question.id;
     });
 
-    const commonQuestions = Object.keys(this.props.questions).map((question) => {
+    const sharedQuestions = Object.keys(this.props.questions).map((question) => {
       if (userQuestions.includes(parseInt(question)) && otherUserQuestions.includes(parseInt(question))) {
         return this.props.questions[question];
       }
     }).filter((question) => question !== undefined);
 
-    if (commonQuestions.length === 0) {
+    if (sharedQuestions.length === 0) {
       return 0;
     }
 
-    commonQuestions.forEach((question) => {
+    sharedQuestions.forEach((question) => {
       currentUserScore += this.calculateQuestionScore(question, this.props.currentUser, user);
-      currentUserQuestionTotal += this.calculateQuestionImportance(question, this.props.currentUser);
       otherUserScore += this.calculateQuestionScore(question, user, this.props.currentUser);
-      otherUserQuestionTotal += this.calculateQuestionImportance(question, user);
+      currentUserQuestionScore += this.calculateQuestionImportance(question, this.props.currentUser);
+      otherUserQuestionScore += this.calculateQuestionImportance(question, user);
     });
 
-    const currentUserPercent = (currentUserScore / currentUserQuestionTotal);
-    const otherUserPercent = (otherUserScore / otherUserQuestionTotal);
+    const currentUserPercent = (currentUserScore / currentUserQuestionScore);
+    const otherUserPercent = (otherUserScore / otherUserQuestionScore);
 
     const multiplied = currentUserPercent * otherUserPercent;
-    const root = commonQuestions.length;
+    const root = sharedQuestions.length;
     let matchPercent = Math.floor((Math.sqrt(multiplied) - (1 / (2 * root))) * 100);
 
     if (matchPercent < 0) {
       matchPercent = 0;
+    } else if (isNaN(matchPercent)) {
+      matchPercent = 54;
     }
     return matchPercent;
   }
@@ -172,7 +168,7 @@ class Matches extends React.Component {
 
   }
 
-  usernameSort(a, b) {
+  sortByUsername(a, b) {
     if (this.props.users[a.user].username < this.props.users[b.user].username) {
       return -1;
     } else if (this.props.users[a.user].username > this.props.users[b.user].username) {
@@ -204,7 +200,7 @@ class Matches extends React.Component {
       if (this.state.sortBy === "match percentage") {
         return b.matchPercentage - a.matchPercentage;
       } else if (this.state.sortBy === "username") {
-        return this.usernameSort(a, b);
+        return this.sortByUsername(a, b);
       } else {
         return this.props.users[a.user].age - this.props.users[b.user].age;
       }
@@ -230,7 +226,7 @@ class Matches extends React.Component {
     return matches;
   }
 
-  sortOptions() {
+  sortParams() {
     return (
       <select className="sort-dropdown" onChange={ this.handleSort }>
         <option value="match percentage">Match Percentage</option>
@@ -239,7 +235,7 @@ class Matches extends React.Component {
     );
   }
 
-  distanceOptions() {
+  distanceParams() {
     return (
       <select className="sort-dropdown" onChange={ this.handleDistance }>
         <option value="2500">Any</option>
@@ -269,13 +265,13 @@ class Matches extends React.Component {
 
     return (
       <div className="browse-main">
-        {this.preferences()}
+        {this.locationPreference()}
         <div className="sort-box group">
           <div className="sort-text-container">Sort by:
-            {this.sortOptions()}
+            {this.sortParams()}
           </div>
           <div className="distance-container">Distance:
-            {this.distanceOptions()}
+            {this.distanceParams()}
           </div>
         </div>
         <div className="match-container">
