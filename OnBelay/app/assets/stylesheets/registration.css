@@ -134,6 +134,7 @@
 .phase-one-button-container:hover {
   background-color: rgb(222, 222, 222);
   background-color: rgba(222, 222, 222, 0.8);
+  cursor: pointer;
 }
 
 

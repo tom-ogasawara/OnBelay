@@ -51,14 +51,35 @@ class Profile extends React.Component {
         if (errors === null) {
           let cloud_url = imageInfo[0].url;
           this.setState({
-            image_url: cloud_url
+            imageUrl: cloud_url
           });
+          const user = this.props.profile;
+          const formData = new FormData();
+          formData.append("user[image]", cloud_url);
+          this.props.updateImage(formData, user);
         }
       }
     );
   }
 
 
+  // handleImage(e) {
+  //     e.preventDefault();
+  //
+  //     const user = this.props.profile;
+  //     const file = e.currentTarget.files[0];
+  //     const fileReader = new FileReader();
+  //     fileReader.onloadend = () => {
+  //       this.setState({ imageFile: file, imageUrl: fileReader.result });
+  //       const formData = new FormData();
+  //       formData.append("user[image]", file);
+  //       this.props.updateImage(formData, user);
+  //     };
+  //
+  //     if (file) {
+  //       fileReader.readAsDataURL(file);
+  //     }
+  //   }
 
 
   handleLike(e) {
@@ -141,13 +162,15 @@ class Profile extends React.Component {
     }
   }
 
+
+
   profPic() {
     if (this.props.currentUser.id === this.props.profile.id) {
       return (
         <div>
           <img className="prof-pic" src={this.state.imageUrl} ></img>
-          <label htmlFor="update-input" className="update-image-block">Update</label>
-          <input id="update-input" type="file" onChange={ this.cloudinate } />
+          <button className="update-image-block" onClick={this.cloudinate}>Update</button>
+
         </div>
       );
     } else {

@@ -27,7 +27,6 @@ demo_user_a = User.create(
   age: 35,
   location: "95060",
   summary: "Climbing is this long term, lifelong journey. It’s really important to just take your time with it and keep it fun. I’ve seen a lot of people burn out because it starts becoming this job for them. It stops being fun. For me, it’s been really important to keep it enjoyable. Listen to your motivation.",
-  image: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/sharma_user_image_de1qct.jpg"
 )
 
 demo_user_b = User.create(
@@ -39,7 +38,6 @@ demo_user_b = User.create(
   age: 30,
   location: "94705",
   summary: "Waking up today I can’t help but look at the world with different eyes. Having achieved the first ascent of Burden of Dreams marks a new level in my climbing. With a handful of existing 8C+ boulders in the world, proposing 9A is the logical step.",
-  image: "http://res.cloudinary.com/tomogasawara/image/upload/v1484685698/nalle_user_image_swwxsv.jpg"
 )
 
 # write questions
@@ -162,10 +160,6 @@ total = 0
 
 # seed users
 
-user_images = HTTParty.get('https://pixabay.com/api/?key=4030205-09edb77b80f0f13b40ea34bea&q=rock+climbing&image_type=photo')
-user_image_urls = user_images["hits"].map { |picture| picture["webformatURL"] }
-
-
 while total < 100 do
   user = nil;
 
@@ -219,61 +213,6 @@ while total < 100 do
     end
   end
 
-end
-
-# seed conversations
-
-unique_conversations = []
-max_convo_id = 0
-
-while unique_conversations.length < 100 do
-
-  rand_user_one = rand((max_id-99)..max_id)
-  rand_user_two = rand((max_id-99)..max_id)
-
-  while rand_user_two == rand_user_one
-    rand_user_two = rand((max_id-99)..max_id)
-  end
-
-  if unique_conversations.length % 49 == 0
-    conversation_pair = [demo_user_a.id, rand_user_two]
-  elsif unique_conversations.length % 48 == 0
-    conversation_pair = [rand_user_one, demo_user_a.id]
-  else
-    conversation_pair = [rand_user_one, rand_user_two]
-  end
-
-  unless unique_conversations.include?(conversation_pair)
-    unique_conversations << conversation_pair
-    conversation = Conversation.create(
-      user_one_id: conversation_pair[0],
-      user_two_id: conversation_pair[1]
-    )
-    max_convo_id = conversation.id if conversation.id > max_convo_id
-  end
-
-end
-
-# seed 1000 messages
-
-500.times do
-
-  random_conversation = rand((max_convo_id-99)..max_convo_id)
-  conversation = Conversation.find(random_conversation)
-
-  if rand(2) == 1
-    Message.create(
-      author_id: conversation.started_user.id,
-      thread_id: conversation.id,
-      body: Faker::Hipster.sentence
-    )
-  else
-    Message.create(
-      author_id: conversation.received_user.id,
-      thread_id: conversation.id,
-      body: Faker::Hipster.sentence
-    )
-  end
 end
 
 conversation1 = Conversation.create(
