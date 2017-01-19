@@ -56,7 +56,7 @@ class Questions extends React.Component {
         } else if (this.responseAcceptableArray(question.id).includes(answer.body)) {
           return <p key={answer.id} className="question-answer match-response">{answer.body}</p>;
         } else {
-          return <p key={answer.id} className="question-answer crossed">{answer.body}</p>;
+          return <p key={answer.id} className="question-answer not-acceptable">{answer.body}</p>;
         }
       });
 
@@ -97,7 +97,7 @@ class Questions extends React.Component {
   render() {
     if (this.props.questions) {
       return (
-        <div className="content-questions group">
+        <div className="questions-content group">
           <div className="main-questions">
             {this.questionFormHeader()}
             {this.questionFormRender()}
