@@ -239,9 +239,9 @@ class Matches extends React.Component {
     return (
       <select className="sort-dropdown" onChange={ this.handleDistance }>
         <option value="2500">Any</option>
-        <option value="2">2 miles</option>
         <option value="5">5 miles</option>
         <option value="10">10 miles</option>
+        <option value="25">25 miles</option>
         <option value="50">50 miles</option>
         <option value="100">100 miles</option>
       </select>
