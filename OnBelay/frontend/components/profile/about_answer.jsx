@@ -60,7 +60,6 @@ class AboutAnswer extends React.Component {
       <div>
         <button className="about-button" onClick={ this.handleClick }>
           <span className="about-title">{this.props.answerTitle}</span>
-          <span className="edit-icon"></span>
         </button>
       </div>
     );
