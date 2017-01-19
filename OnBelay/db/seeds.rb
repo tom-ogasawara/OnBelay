@@ -5,16 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+#
 # reset DB
 
-# User.destroy_all
-# Like.destroy_all
-# Message.destroy_all
-# Conversation.destroy_all
-# Question.destroy_all
-# Answer.destroy_all
-# Response.destroy_all
+User.destroy_all
+Like.destroy_all
+Message.destroy_all
+Conversation.destroy_all
+Question.destroy_all
+Answer.destroy_all
+Response.destroy_all
 
 # create two demo users
 
