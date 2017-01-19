@@ -17,7 +17,7 @@ class Profile extends React.Component {
     this.profileActions = this.profileActions.bind(this);
     this.likeButton = this.likeButton.bind(this);
     this.cloudinate = this.cloudinate.bind(this);
-    this.profPic = this.profPic.bind(this);
+    this.profilePicture = this.profilePicture.bind(this);
   }
 
 
@@ -144,7 +144,7 @@ class Profile extends React.Component {
 
 
 
-  profPic() {
+  profilePicture() {
     if (this.props.currentUser.id === this.props.profile.id) {
       return (
         <div>
@@ -171,7 +171,7 @@ class Profile extends React.Component {
             <div className="profile-header-content group">
               <div className="user-basics group">
                 <div className="user-thumb">
-                  {this.profPic()}
+                  {this.profilePicture()}
                 </div>
                 <div className="user-info group">
                   <h2 className="user-name">

@@ -160,7 +160,7 @@ total = 0
 
 # seed users
 
-while total < 100 do
+while total < 20 do
   user = nil;
 
   username = Faker::Internet.user_name
