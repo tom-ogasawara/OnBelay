@@ -3,12 +3,12 @@ import { Link, withRouter } from 'react-router';
 import AboutContainer from './about_container';
 import TabsContainer from '../tabs/tabs_container';
 import QuestionsContainer from '../question/questions_container';
+import merge from 'lodash/merge';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // imageFile: null,
       imageUrl: null
     };
 
@@ -54,10 +54,10 @@ class Profile extends React.Component {
             imageUrl: cloud_url
           });
           const user = this.props.profile;
-
+          const userWithPhoto = merge(user, {image_url: cloud_url});
           // const formData = new FormData();
           // formData.append("user[image]", cloud_url);
-          this.props.updateProfile(user);
+          this.props.updateProfile(userWithPhoto);
           // console.log(cloud_url);
           // console.log(this.state);
         }

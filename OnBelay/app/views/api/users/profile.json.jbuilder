@@ -5,4 +5,4 @@ json.indoorsoutdoors @user.indoorsoutdoors
 json.age @user.age
 json.location @user.location
 json.summary @user.summary
-json.image_url asset_path(@user.image.url)
+json.image_url @user.image_url

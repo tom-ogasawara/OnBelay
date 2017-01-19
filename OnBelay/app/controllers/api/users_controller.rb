@@ -62,7 +62,8 @@ class Api::UsersController < ApplicationController
         :location,
         :summary,
         :prof_pic_id,
-        :image
+        :image_url,
+        :id
       )
   end
 
