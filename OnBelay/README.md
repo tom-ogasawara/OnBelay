@@ -21,9 +21,9 @@ onBelay is a personal project by Tom Ogasawara.
 
 Like OKCupid, users answer questions, and match compatibility is calculated by a (heavily) simplified interpretation of the [OKCupid match algorithm][OKCupidAlgorithm].
 
+![Browse][browseMatches]
 
 ## Technology
-![Browse][browseMatches]
 
 ### Backend
 
