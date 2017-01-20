@@ -9,18 +9,14 @@ onBelay is a personal project by Tom Ogasawara.
 ## Features
 
 - User accounts with secure authentication
-- Browsing other users by similar interest and geolocation
-- Messaging with easy to use chat interface
 - User profile pages with image uploading and cloud storage
+![profile][userProfile]
+- Browse other users by similar interest and geolocation
+- Message users with integrated chat interface
 - Personality questions to determine match compatibility
-- Liking other user profiles 
+- View and like other user profiles
 
-Music streaming with controls and no interruption
-Audio uploading and management
-Image attachments for users and audio tracks
-Adding tracks to a temporary queue for playback
-Playlists of music tracks to playback tunes in sequence
-Searching for users and tracks
+![Browse][]
 onBelay creates users with a `user` table on the backend, with columns for
 
 [onBelay]: http://onbelay.io
