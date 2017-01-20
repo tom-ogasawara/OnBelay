@@ -18,6 +18,9 @@ onBelay is a personal project by Tom Ogasawara.
 
 
 ![Browse][browseMatches]
+![Conversation][conversation]
+
+
 
 ## Technology
 
@@ -37,6 +40,8 @@ All of the React components, Flux action creators, API utilities, dispatcher, an
 
 User images are stored via Cloudinary.
 
+
+
 ## Future direction
 
 Currently, onBelay can be accurately considered a minimum viable product. To push it into a fully functional (and useful) web application, I would like to implement the following features:
@@ -45,8 +50,7 @@ Currently, onBelay can be accurately considered a minimum viable product. To pus
 - Discussion forums and group messaging
 - Additional filters and user parameters
 
-<!-- [conversation]: ./docs/images/conversation.png "Conversation" -->
-
+[conversation]: ./docs/images/conversation.png "Conversation"
 [onBelay]: http://onbelay.io
 [splashPage]: ./docs/images/splash_page.png "Splash Page"
 [userProfile]: ./docs/images/user_profile.png "User Profile"
