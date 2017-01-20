@@ -13,6 +13,10 @@ onBelay is a personal project by Tom Ogasawara.
 
 ## Features
 
-### User Creation, Editing and Rendering
+- feature goes here
+- feature goes here
+- feature goes here
+- feature goes here
+
 
 onBelay creates users with a `user` table on the backend, with columns for
