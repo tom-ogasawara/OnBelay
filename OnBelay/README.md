@@ -4,13 +4,15 @@
 
 [sitLink]: http://www.onbelay.io
 
-onBelay is a full-stack, single-paged web application that provides rock climbers with a forum to connect and climb together. The interface and site structure is inspired by OKCupid. It uses Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Flux framework on the frontend.
+onBelay.io is a full-stack, single-paged web application that provides rock climbers with a forum to connect and climb together. Inspired by OKCupid, it matches users with similar interests and allows them to communicate via an integrated chat system. It uses Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Flux framework on the frontend.
 
-## Features & Implementation
+onBelay is a personal project by Tom Ogasawara.
 
-### Entry Page
-
-Entry Page:
 ![entry page](docs/production/PUTFILENAMEHERE.png)
 
+
+## Features
+
 ### User Creation, Editing and Rendering
+
+onBelay creates users with a `user` table on the backend, with columns for

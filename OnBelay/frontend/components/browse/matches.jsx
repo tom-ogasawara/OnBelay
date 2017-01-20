@@ -139,11 +139,12 @@ class Matches extends React.Component {
   }
 
   calculateQuestionScore(question, user, otherUser) {
-    const answers = question.answers;
-    const answerIds = question.answers.map((answer) => answer.id);
     let otherUserAnswer = null;
     let userAcceptables = null;
     let userImportance = 0;
+
+    const answers = question.answers;
+    const answerIds = question.answers.map((answer) => answer.id);
 
     answers.forEach((answer) => {
       otherUser.responses.forEach((response) => {
