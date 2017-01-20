@@ -21,8 +21,8 @@ class Matches extends React.Component {
     this.locationPreference = this.locationPreference.bind(this);
     this.disciplinePreference = this.disciplinePreference.bind(this);
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
-    this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
     this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
+    this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
     this.matchListItems = this.matchListItems.bind(this);
   }
 
@@ -113,29 +113,19 @@ class Matches extends React.Component {
     const currentUserPercent = (currentUserScore / currentUserQuestionScore);
     const otherUserPercent = (otherUserScore / otherUserQuestionScore);
 
-    const multiplied = currentUserPercent * otherUserPercent;
-    const root = sharedQuestions.length;
-    let matchPercent = Math.floor((Math.sqrt(multiplied) - (1 / (2 * root))) * 100);
+    const percentProduct = currentUserPercent * otherUserPercent;
+    const numQuestions = sharedQuestions.length;
+
+    let rawMatchValue = (Math.sqrt(percentProduct) - (1 / (2 * numQuestions)));
+    let matchPercent = Math.floor((rawMatchValue) * 100);
 
     if (matchPercent < 0) {
       matchPercent = 0;
     } else if (isNaN(matchPercent)) {
       matchPercent = 54;
     }
+
     return matchPercent;
-  }
-
-  calculateQuestionImportance(question, user) {
-    let questionImportance = 0;
-    const answers = question.answers.map((answer) => answer.id);
-
-    user.responses.forEach((response) => {
-      if (answers.includes(response.answer_id)) {
-        questionImportance = response.importance;
-      }
-    });
-
-    return questionImportance;
   }
 
   calculateQuestionScore(question, user, otherUser) {
@@ -168,6 +158,20 @@ class Matches extends React.Component {
     }
 
   }
+
+  calculateQuestionImportance(question, user) {
+    let questionImportance = 0;
+    const answers = question.answers.map((answer) => answer.id);
+
+    user.responses.forEach((response) => {
+      if (answers.includes(response.answer_id)) {
+        questionImportance = response.importance;
+      }
+    });
+
+    return questionImportance;
+  }
+
 
   sortByUsername(a, b) {
     if (this.props.users[a.user].username < this.props.users[b.user].username) {
