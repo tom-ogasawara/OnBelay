@@ -10,12 +10,12 @@ class Chat extends React.Component {
       textInput: "",
     };
 
-    this.renderDisplay = this.renderDisplay.bind(this);
-    this.otherUsername = this.otherUsername.bind(this);
     this.chatForm = this.chatForm.bind(this);
+    this.otherUsername = this.otherUsername.bind(this);
+    this.otherUserId = this.otherUserId.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.otherUserId = this.otherUserId.bind(this);
+    this.renderDisplay = this.renderDisplay.bind(this);
   }
 
   componentDidMount() {
