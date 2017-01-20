@@ -55,7 +55,7 @@ class MatchItem extends React.Component {
           <div className="match-text">
             <p className="username-text">{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.age} · {this.props.user.discipline}</p>
-            <p className={"match-percentage" + this.matchTextColor()}>{this.props.matchPercentage}% Match</p>
+            <p className={"match-percentage" + " " + this.matchTextColor()}>{this.props.matchPercentage}% Match</p>
             {this.likeButton()}
           </div>
         </div>

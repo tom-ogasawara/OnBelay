@@ -17,13 +17,13 @@ onBelay is a personal project by Tom Ogasawara.
 - View and like other user profiles
 
 
-![Browse][browseMatches]
-
-Like OKCupid, users answer questions, and match compatibility is calculated by a (heavily) simplified version of the [OKCupid match algorithm][OKCupidAlgorithm].
-
 ![Conversation][conversation]
 
+Like OKCupid, users answer questions, and match compatibility is calculated by a (heavily) simplified interpretation of the [OKCupid match algorithm][OKCupidAlgorithm].
+
+
 ## Technology
+![Browse][browseMatches]
 
 ### Backend
 

@@ -21,8 +21,8 @@ class Matches extends React.Component {
     this.locationPreference = this.locationPreference.bind(this);
     this.disciplinePreference = this.disciplinePreference.bind(this);
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
-    this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
-    this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
+    this.findQuestionScore = this.findQuestionScore.bind(this);
+    this.findQuestionImportance = this.findQuestionImportance.bind(this);
     this.matchListItems = this.matchListItems.bind(this);
   }
 
@@ -104,10 +104,10 @@ class Matches extends React.Component {
     }
 
     sharedQuestions.forEach((question) => {
-      currentUserScore += this.calculateQuestionScore(question, this.props.currentUser, user);
-      otherUserScore += this.calculateQuestionScore(question, user, this.props.currentUser);
-      currentUserQuestionScore += this.calculateQuestionImportance(question, this.props.currentUser);
-      otherUserQuestionScore += this.calculateQuestionImportance(question, user);
+      currentUserScore += this.findQuestionScore(question, this.props.currentUser, user);
+      otherUserScore += this.findQuestionScore(question, user, this.props.currentUser);
+      currentUserQuestionScore += this.findQuestionImportance(question, this.props.currentUser);
+      otherUserQuestionScore += this.findQuestionImportance(question, user);
     });
 
     const currentUserPercent = (currentUserScore / currentUserQuestionScore);
@@ -122,13 +122,13 @@ class Matches extends React.Component {
     if (matchPercent < 0) {
       matchPercent = 0;
     } else if (isNaN(matchPercent)) {
-      matchPercent = 54;
+      matchPercent = 54; 
     }
 
     return matchPercent;
   }
 
-  calculateQuestionScore(question, user, otherUser) {
+  findQuestionScore(question, user, otherUser) {
     let otherUserAnswer = null;
     let userAcceptables = null;
     let userImportance = 0;
@@ -159,7 +159,7 @@ class Matches extends React.Component {
 
   }
 
-  calculateQuestionImportance(question, user) {
+  findQuestionImportance(question, user) {
     let questionImportance = 0;
     const answers = question.answers.map((answer) => answer.id);
 
