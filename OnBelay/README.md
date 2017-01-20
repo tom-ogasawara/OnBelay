@@ -10,18 +10,21 @@ onBelay is a personal project by Tom Ogasawara.
 
 - User accounts with secure authentication
 - User profile pages with image uploading and cloud storage
-![profile][userProfile]
 - Browse other users by similar interest and geolocation
 - Message users with integrated chat interface
 - Personality questions to determine match compatibility
 - View and like other user profiles
 
-![Browse][]
-onBelay creates users with a `user` table on the backend, with columns for
+![Browse][browseMatches]
+
+## Technology
+
+## Future direction
+
+Currently, onBelay is [conversation]: ./docs/images/conversation.png "Conversation"
 
 [onBelay]: http://onbelay.io
 [splashPage]: ./docs/images/splash_page.png "Splash Page"
 [userProfile]: ./docs/images/user_profile.png "User Profile"
 [browseMatches]: ./docs/images/browse_matches.png "Browse Matches"
 [questionForm]: ./docs/images/question_form.png "Question Form"
-[conversation]: ./docs/images/conversation.png "Conversation"
