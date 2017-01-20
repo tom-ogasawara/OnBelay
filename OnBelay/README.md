@@ -17,8 +17,8 @@ onBelay is a personal project by Tom Ogasawara.
 onBelay creates users with a `user` table on the backend, with columns for
 
 [onBelay]: http://onbelay.io
-[splashPage]: /app/assets/images/splash_page.png "Splash Page"
-[userProfile]: /app/assets/images/user_profile.png "User Profile"
-[browseMatches]: /app/assets/images/browse_matches.png "Browse Matches"
-[questionForm]: /app/assets/images/question_form.png "Question Form"
-[conversation]: /app/assets/images/conversation.png "Conversation"
+[splashPage]: ./docs/images/splash_page.png "Splash Page"
+[userProfile]: ./docs/images/user_profile.png "User Profile"
+[browseMatches]: ./docs/images/browse_matches.png "Browse Matches"
+[questionForm]: ./docs/images/question_form.png "Question Form"
+[conversation]: ./docs/images/conversation.png "Conversation"
