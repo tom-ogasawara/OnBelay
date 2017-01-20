@@ -18,9 +18,10 @@ onBelay is a personal project by Tom Ogasawara.
 
 
 ![Browse][browseMatches]
+
+Like OKCupid, users answer questions, and match compatibility is calculated by a (heavily) simplified version of the [OKCupid match algorithm][OKCupidAlgorithm].
+
 ![Conversation][conversation]
-
-
 
 ## Technology
 
@@ -38,9 +39,7 @@ All of the React components, Flux action creators, API utilities, dispatcher, an
 
 ### File Storage
 
-User images are stored via Cloudinary.
-
-
+User images are uploaded via a widget and stored remotely on Cloudinary.
 
 ## Future direction
 
@@ -51,6 +50,7 @@ Currently, onBelay can be accurately considered a minimum viable product. To pus
 - Additional filters and user parameters
 
 [conversation]: ./docs/images/conversation.png "Conversation"
+[OKCupidAlgorithm]: http://ed.ted.com/lessons/inside-okcupid-the-math-of-online-dating-christian-rudder
 [onBelay]: http://onbelay.io
 [splashPage]: ./docs/images/splash_page.png "Splash Page"
 [userProfile]: ./docs/images/user_profile.png "User Profile"
